@@ -1,5 +1,5 @@
 # 2UVFramework
-Atomaition framework for the chemical sector and healt care sector
+Atomation framework for the chemical sector and healt care sector
 
 # Donnation
 
