@@ -1,5 +1,5 @@
 # 2UVFramework
-Atomation framework for the chemical sector and healt care sector
+Automation framework for the chemical sector and healt care sector
 
 # Donnation
 
@@ -35,3 +35,5 @@ You can donate on the account BE30 0631 9465 7211 BIC GCCBCBB
 enmf.wvd@hotmail.com
 
 And it does not come offline again
+
+If you want to use it for business purpose i would be happy to sign a contract.
