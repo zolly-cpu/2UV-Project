@@ -8,19 +8,9 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
 About
 
 Automation framework chemical and automation processes
-Resources
-Readme
-Activity
-Stars
-0 stars
-Watchers
-0 watching
-Forks
-0 forks
-Releases
-No releases published
-Create a new release
-Packages
-No packages published
-Publish your first package
-Footer
+
+BIC-code: GKCCBEBB
+SWIFT-code (11 tekens): GKCCBEBBXXX
+Bank: Belfius Bank SA/NV
+BE30 0631 9465 7211
+
