@@ -40,8 +40,7 @@ class clInterfaceScript:
                Tracker_Length_3 = []
                while z < z_dimension:
                     self.Tracker_CoordX.append([i,j,z])
-                    v = math.sqrt((i*i)+(j*j))
-                    p = math.sqrt((v*v)+(z*z))
+                    p = math.sqrt((i*i)+(j*j)+(z*z))
                     Tracker_Length_3.append(p)
                     print (p)
                     z = z + 1
@@ -65,8 +64,8 @@ class clInterfaceScript:
                Tracker_Length_3 = []
                while z < z_dimension:
                     self.Tracker_CoordY.append([i,j,z])
-                    v = math.sqrt((i*i)+(j*j))
-                    p = math.sqrt((v*v)+(z*z))
+                    #v = math.sqrt((i*i)+(j*j))
+                    p = math.sqrt((i*i)+(j*j)+(z*z))
                     Tracker_Length_3.append(p)
                     print (p)
                     z = z + 1
@@ -89,10 +88,8 @@ class clInterfaceScript:
                Tracker_Length_3 = []
                while z < z_dimension:
                     self.Tracker_CoordZ.append([i,j,z])
-                    v = math.sqrt((i*i)+(j*j))
-                    p = math.sqrt((v*v)+(z*z))
+                    p = math.sqrt((i*i)+(j*j)+(z*z))
                     Tracker_Length_3.append(p)
-                    print (p)
                     z = z + 1
                z = 0     
                j = j + 1
@@ -103,7 +100,7 @@ class clInterfaceScript:
 
     def bestfit(self,trio_1,trio_2,trio_3,dim1,dim2,dim3):
         print('START bestfit')
-        tol = 2
+        tol = 5
         counter_1 = 0
         counter_2 = 0
         counter_3 = 0
@@ -122,8 +119,7 @@ class clInterfaceScript:
                         for elements_coord in self.Tracker_CoordX:
                              if (elements_coord[0] == counter_X_L1) and (elements_coord[1] == counter_X_L2) and (elements_coord[2] == counter_X_L3):
                                  BlockListNumberX.append(elements_coord)
-                                 print(elements_coord)
-                    counter_X_L3 = counter_X_L3 + 1    
+                        counter_X_L3 = counter_X_L3 + 1    
                 counter_X_L2 = counter_X_L2 + 1        
             counter_X_L1 = counter_X_L1 + 1
         
@@ -137,14 +133,15 @@ class clInterfaceScript:
             for element_1_Y in element_1:
                 counter_Y_L3 = 0
                 for element_1_Z in element_1_Y:
+                    print(element_1_Z)
                     if trio_2 < (element_1_Z + tol) and trio_2 > (element_1_Z - tol):  
                         for elements_coord in self.Tracker_CoordY:
                            if elements_coord[0] == counter_Y_L1 and elements_coord[1] == counter_Y_L2 and elements_coord[2] == counter_Y_L3:
                                  BlockListNumberY.append(elements_coord)
-                                 print('element Y')
                     counter_Y_L3 = counter_Y_L3 + 1
                 counter_Y_L2 = counter_Y_L2 + 1
             counter_Y_L1 = counter_Y_L1 + 1
+            
              
         BlockListNumberZ=[]
         element_1_Y=[]
@@ -159,28 +156,16 @@ class clInterfaceScript:
                         for elements_coord in self.Tracker_CoordZ:
                              if elements_coord[0] == counter_Z_L1 and elements_coord[1] == counter_Z_L2 and elements_coord[2] == counter_Z_L3:
                                  BlockListNumberZ.append(elements_coord)
-                                 print('element Z')
                      counter_Z_L3 = counter_Z_L3 + 1            
                 counter_Z_L2 = counter_Z_L2 + 1                
             counter_Z_L1 = counter_Z_L1 + 1
             
         blockTolerance=1
         print ('Continue')
-        i = 0
-        j = 0
-        k = 0
         tol = 0
-        while i < len(BlockListNumberX):
-            j = 0
-            while j < len(BlockListNumberY):
-                k = 0
-                while k < len(BlockListNumberZ):
-                    elements_coord_1 = BlockListNumberX[i]
-                    elements_coord_2 = BlockListNumberY[j]
-                    elements_coord_3 = BlockListNumberZ[k]
-                    print (elements_coord_1)
-                    print (elements_coord_2)
-                    print (elements_coord_3)
+        for elements_coord_1 in BlockListNumberX:
+            for elements_coord_2 in BlockListNumberY:
+                for elements_coord_3 in BlockListNumberZ:
                     if (elements_coord_1[0] < ((elements_coord_2[1]) + blockTolerance) and 
                         elements_coord_1[0] > ((elements_coord_2[1]) - blockTolerance) and
                         elements_coord_1[0] < ((elements_coord_3[1]) + blockTolerance) and
@@ -198,9 +183,9 @@ class clInterfaceScript:
                             print (elements_coord_2)
                             print (elements_coord_3)
                             return [elements_coord_1,elements_coord_2,elements_coord_3]
-                    k = k + 1
-                j = j + 1
-            i = i + 1
+                    #k = k + 1
+                #j = j + 1
+            #i = i + 1
         print('STOP bestfit')    
             
             
