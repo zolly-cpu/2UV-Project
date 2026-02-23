@@ -13,7 +13,6 @@ sudo -u postgres createdb --owner=wolly TEST_PROJECT
 psql TEST_PROJECT
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 
-And then update with dbEditor
+And then update with DatabaseEditor
 
-TODO:
-- DBEDITOR has still some problem
+The startup arguments for the applications you can find in the AppStarter.xml
