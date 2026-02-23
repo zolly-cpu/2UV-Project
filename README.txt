@@ -16,3 +16,10 @@ CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 And then update with DatabaseEditor
 
 The startup arguments for the applications you can find in the AppStarter.xml
+
+In the ObjectViewer
+- Planning nog finisched yet
+- Location tracking objects must be created in the ServerTest
+
+SocketBox
+- Open for imlplementing dll's with the protocoll for communication
