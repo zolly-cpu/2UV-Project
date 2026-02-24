@@ -1,0 +1,282 @@
+BBEEBBEE23.02.2026 14:31:48:284BBEE1BBEEzolly-debBBEE2UVServer.exeBBEEclMainWindow::createActions() -> startBBEEBBEE
+BBEEBBEE23.02.2026 14:31:48:284BBEE1BBEEzolly-debBBEE2UVServer.exeBBEEclMainWindow::createActions() -> stopBBEEBBEE
+BBEEBBEE23.02.2026 14:31:48:285BBEE1BBEEzolly-debBBEE2UVLogServer.exeBBEEclMainWindow::initializeIceServer -> StartBBEEBBEE
+BBEEBBEE23.02.2026 14:31:48:295BBEE1BBEEzolly-debBBEE2UVServer.exeBBEEclServerThread::createDatabaseConfiguration() -> clXMLReader::readDatabaseConfiguration(QString paFileName, vector<clDatabaseTable> & paDatabaseTable, QString &paReturnMessage) -> readed database structure ...BBEEBBEE
+BBEEBBEE23.02.2026 14:31:48:321BBEE1BBEEzolly-debBBEE2UVServer.exeBBEEclDatabasePostgres::ConnectDB(QString &paMessage) -> Connection to database ok ...BBEEBBEE
+BBEEBBEE23.02.2026 14:31:53:010BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::initializeLibrarys -> Librarys initializedBBEEBBEE
+BBEEBBEE23.02.2026 14:31:53:010BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::readClassesFromXmlFile -> mapping file readedBBEEBBEE
+BBEEBBEE23.02.2026 14:31:53:010BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::readMethodsFromXmlFileGeneral -> mapping file readedBBEEBBEE
+BBEEBBEE23.02.2026 14:31:53:010BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::loadClasses -> ./Objects/libclOperation.soBBEEBBEE
+BBEEBBEE23.02.2026 14:31:53:011BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::callObjectDLL -> Library [./Objects/libclOperation.so] foundBBEEBBEE
+BBEEBBEE23.02.2026 14:31:53:011BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass loadedBBEEBBEE
+BBEEBBEE23.02.2026 14:31:53:011BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass after stockingBBEEBBEE
+BBEEBBEE23.02.2026 14:31:53:011BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclOperation::createPluginClass -> createdBBEEBBEE
+BBEEBBEE23.02.2026 14:31:53:011BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass calledBBEEBBEE
+BBEEBBEE23.02.2026 14:31:53:011BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::loadClasses() -> Propertie name [PKEY]BBEEBBEE
+BBEEBBEE23.02.2026 14:31:53:011BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::loadClasses() -> Propertie name [NAME]BBEEBBEE
+BBEEBBEE23.02.2026 14:31:53:011BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::loadClasses() -> Propertie name [CREATED_ON]BBEEBBEE
+BBEEBBEE23.02.2026 14:31:53:011BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::loadClasses() -> Propertie name [OBJECT]BBEEBBEE
+BBEEBBEE23.02.2026 14:31:53:011BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::loadClasses() -> Propertie name [OBJECTS]BBEEBBEE
+BBEEBBEE23.02.2026 14:31:53:011BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::loadClasses() -> Propertie name [DATUM_START]BBEEBBEE
+BBEEBBEE23.02.2026 14:31:53:011BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::loadClasses() -> Propertie name [DATUM_STOP]BBEEBBEE
+BBEEBBEE23.02.2026 14:31:53:011BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::loadClasses() -> Propertie name [H2O_VALUE]BBEEBBEE
+BBEEBBEE23.02.2026 14:31:53:011BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::loadClasses() -> Propertie name [PERFORMED_WORKSTEP]BBEEBBEE
+BBEEBBEE23.02.2026 14:31:53:011BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::loadClasses() -> Propertie name [OPERATION_STATE]BBEEBBEE
+BBEEBBEE23.02.2026 14:31:53:011BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::loadClasses() -> Propertie name [OPERATION_SOURCE]BBEEBBEE
+BBEEBBEE23.02.2026 14:31:53:012BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::loadClasses() -> Propertie name [OPERATION_CLOSED_CAUSE]BBEEBBEE
+BBEEBBEE23.02.2026 14:31:53:012BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::loadClasses() -> Propertie name [OPERATION_ERROR_INFORMATION]BBEEBBEE
+BBEEBBEE23.02.2026 14:31:53:012BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::loadClasses -> ./Objects/libclErrorTable.soBBEEBBEE
+BBEEBBEE23.02.2026 14:31:53:012BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::callObjectDLL -> Library [./Objects/libclErrorTable.so] foundBBEEBBEE
+BBEEBBEE23.02.2026 14:31:53:012BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass loadedBBEEBBEE
+BBEEBBEE23.02.2026 14:31:53:012BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass after stockingBBEEBBEE
+BBEEBBEE23.02.2026 14:31:53:012BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass calledBBEEBBEE
+BBEEBBEE23.02.2026 14:31:53:012BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::loadClasses -> ./Objects/libclProduct.soBBEEBBEE
+BBEEBBEE23.02.2026 14:31:53:012BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::callObjectDLL -> Library [./Objects/libclProduct.so] not foundBBEEBBEE
+BBEEBBEE23.02.2026 14:31:53:012BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::loadClasses() -> Propertie name [PKEY]BBEEBBEE
+BBEEBBEE23.02.2026 14:31:53:012BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::loadClasses() -> Propertie name [NAME]BBEEBBEE
+BBEEBBEE23.02.2026 14:31:53:012BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::loadClasses() -> Propertie name [CREATED_ON]BBEEBBEE
+BBEEBBEE23.02.2026 14:31:53:012BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::loadClasses() -> Propertie name [PREVIOUS_WORKSTEP]BBEEBBEE
+BBEEBBEE23.02.2026 14:31:53:012BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::loadClasses() -> Propertie name [CURRENT_WORKSTEP]BBEEBBEE
+BBEEBBEE23.02.2026 14:31:53:012BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::loadClasses() -> Propertie name [NEXT_WORKSTEP]BBEEBBEE
+BBEEBBEE23.02.2026 14:31:53:012BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::loadClasses() -> Propertie name [PRODUCT_STATE]BBEEBBEE
+BBEEBBEE23.02.2026 14:31:53:012BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::loadClasses() -> Propertie name [PRODUCT_WS_STATE]BBEEBBEE
+BBEEBBEE23.02.2026 14:31:53:013BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::loadClasses() -> Propertie name [PRODUCT_INDEX]BBEEBBEE
+BBEEBBEE23.02.2026 14:31:53:013BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::callObjectDLL -> Library [./Methods/libclCreateOperationForMachine.so] foundBBEEBBEE
+BBEEBBEE23.02.2026 14:31:53:013BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass loadedBBEEBBEE
+BBEEBBEE23.02.2026 14:31:53:013BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass after stockingBBEEBBEE
+BBEEBBEE23.02.2026 14:31:53:013BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass calledBBEEBBEE
+BBEEBBEE23.02.2026 14:31:53:013BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::callObjectDLL -> Library [./Methods/libclExportToExcel.so] foundBBEEBBEE
+BBEEBBEE23.02.2026 14:31:53:014BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass loadedBBEEBBEE
+BBEEBBEE23.02.2026 14:31:53:014BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass after stockingBBEEBBEE
+BBEEBBEE23.02.2026 14:31:53:014BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass calledBBEEBBEE
+BBEEBBEE23.02.2026 14:31:53:014BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::callObjectDLL -> Library [./Methods/libclContinueForMachine.so] foundBBEEBBEE
+BBEEBBEE23.02.2026 14:31:53:014BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass loadedBBEEBBEE
+BBEEBBEE23.02.2026 14:31:53:014BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass after stockingBBEEBBEE
+BBEEBBEE23.02.2026 14:31:53:014BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass calledBBEEBBEE
+BBEEBBEE23.02.2026 14:31:53:015BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::callObjectDLL -> Library [./Methods/libclPauseForMachine.so] foundBBEEBBEE
+BBEEBBEE23.02.2026 14:31:53:015BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass loadedBBEEBBEE
+BBEEBBEE23.02.2026 14:31:53:015BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass after stockingBBEEBBEE
+BBEEBBEE23.02.2026 14:31:53:015BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass calledBBEEBBEE
+BBEEBBEE23.02.2026 14:31:53:015BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::callObjectDLL -> Library [./Methods/libclRunForMachine.so] foundBBEEBBEE
+BBEEBBEE23.02.2026 14:31:53:015BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass loadedBBEEBBEE
+BBEEBBEE23.02.2026 14:31:53:015BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass after stockingBBEEBBEE
+BBEEBBEE23.02.2026 14:31:53:015BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass calledBBEEBBEE
+BBEEBBEE23.02.2026 14:31:53:015BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::callObjectDLL -> Library [./Methods/libclOpenLinkedDoc.so] not foundBBEEBBEE
+BBEEBBEE23.02.2026 14:31:53:015BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::callObjectDLL -> Library [./Methods/libclSaveLinkedDoc.so] not foundBBEEBBEE
+BBEEBBEE23.02.2026 14:31:53:016BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::callObjectDLL -> Library [./Methods/libclCreateQrCodeOfObject.so] foundBBEEBBEE
+BBEEBBEE23.02.2026 14:31:53:016BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass loadedBBEEBBEE
+BBEEBBEE23.02.2026 14:31:53:016BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass after stockingBBEEBBEE
+BBEEBBEE23.02.2026 14:31:53:016BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass calledBBEEBBEE
+BBEEBBEE23.02.2026 14:31:53:017BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::callObjectDLL -> Library [./Methods/libclShowQrCodeOfObject.so] foundBBEEBBEE
+BBEEBBEE23.02.2026 14:31:53:017BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass loadedBBEEBBEE
+BBEEBBEE23.02.2026 14:31:53:017BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass after stockingBBEEBBEE
+BBEEBBEE23.02.2026 14:31:53:017BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass calledBBEEBBEE
+BBEEBBEE23.02.2026 14:31:58:123BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::clObjectViewer -> Config file is [classConfigurationView_01.xml]BBEEBBEE
+BBEEBBEE23.02.2026 14:31:58:124BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::readXMLconfigFile -> mapping file readedBBEEBBEE
+BBEEBBEE23.02.2026 14:32:01:124BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::slotButtonRefreshPressed()SELECT * FROM pg_tables WHERE schemaname='public'; -> OKBBEEBBEE
+BBEEBBEE23.02.2026 14:32:01:124BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::slotButtonRefreshPressed()TABLE:[a_customer][a_allergy][a_food_texture][customer][a_customer_remark][allergy][a_does_not_like][customer_remark][a_diet][food_texture][diet][does_not_like][a_food_portion][food_portion][a_paper][a_food_place][paper][food_place][a_food_bread][food_bread][a_food_butter][a_food_charcuterie][food_butter][a_food_drink][food_drink][a_food_drinkserivce][a_food_sugar][food_drinkserivce][food_charcuterie][food_sugar][a_food_dessert][food_dinner][food_dessert][a_food_breakfast][a_food_lunch][food_breakfast][a_food_dinner][food_lunch][a_cycles][cycles][a_cycle_routine][cycle_routine][a_batch][batch][a_product][a_employee][product][a_mach_group][a_empl_group][a_linkeddoc][mach_group][a_planning][employee][shift][planning][a_shift][operation][a_operation][empl_group][a_object_to_locate][living_obj_location][linkeddoc][a_workstep][a_errors_living_obj_location][living_obj_mach][a_errors_living_obj_mach][workstep][a_living_obj_mach][errors_living_obj_mach][a_living_obj_location][errors_living_obj_location][object_to_locate][a_rti_add_customer][rti_add_customer][a_rti_add_phone][rti_add_phone][a_rti_add_chef][rti_add_chef]BBEEBBEE
+BBEEBBEE23.02.2026 14:32:01:125BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 14:32:01:126BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::createClassesInTreeView -> bool clDatabasePostgres::getFromTableGeneral(QString paTableName,QString paStartValue, QString paMaxValue,vector <QString> &paReturnId, QString &paMessage) -> "SELECT pkey,action_name FROM a_a_ LIMIT 1000 OFFSET 0;" command failed ...BBEEBBEE
+BBEEBBEE23.02.2026 14:32:01:127BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::createClassesInTreeView -> Added table [employee]BBEEBBEE
+BBEEBBEE23.02.2026 14:32:01:128BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 14:32:01:129BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::createClassesInTreeView -> bool clDatabasePostgres::getFromTableGeneral(QString paTableName,QString paStartValue, QString paMaxValue,vector <QString> &paReturnId, QString &paMessage) -> "SELECT pkey,action_name FROM a_a_ LIMIT 1000 OFFSET 0;" command failed ...BBEEBBEE
+BBEEBBEE23.02.2026 14:32:01:129BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::createClassesInTreeView -> Added table [empl_group]BBEEBBEE
+BBEEBBEE23.02.2026 14:32:02:825BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::slotTreeClassItemPressed -> SELECT pkey,name FROM employee LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 14:32:03:402BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclMainWindow::slotDoIt() insert values  [zolly-deb]  [50]  [50]  [50]BBEEBBEE
+BBEEBBEE23.02.2026 14:32:03:403BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclMainWindow::slotDoIt() BBEEBBEE
+BBEEBBEE23.02.2026 14:32:05:500BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::slotTreeClassItemPressed -> SELECT pkey,name,sure_name,famely_name,email,password,employee_groups,to_char(created_on,'YYYY-MM-DD HH24:MI:SS.MS') FROM employee WHERE pkey= '365ac3a6-10b6-11f1-8000-0072ee7de312'; -> OKBBEEBBEE
+BBEEBBEE23.02.2026 14:32:05:505BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::slotTreeClassItemPressed -> SELECT pkey,action_name FROM a_employee LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 14:32:13:406BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclMainWindow::slotDoIt() insert values  [zolly-deb]  [50]  [50]  [50]BBEEBBEE
+BBEEBBEE23.02.2026 14:32:13:408BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclMainWindow::slotDoIt() BBEEBBEE
+BBEEBBEE23.02.2026 14:32:23:411BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclMainWindow::slotDoIt() insert values  [zolly-deb]  [50]  [50]  [50]BBEEBBEE
+BBEEBBEE23.02.2026 14:32:23:412BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclMainWindow::slotDoIt() BBEEBBEE
+BBEEBBEE23.02.2026 14:32:25:552BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::slotTreeClassItemPressed -> SELECT pkey,name FROM employee LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 14:32:26:594BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::slotNewElement()-> Table name=employeeBBEEBBEE
+BBEEBBEE23.02.2026 14:32:26:597BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::slotNewElement()-> Amount of properties=8BBEEBBEE
+BBEEBBEE23.02.2026 14:32:26:598BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::slotNewElement()-> Propertie name [sure_name]BBEEBBEE
+BBEEBBEE23.02.2026 14:32:26:599BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::slotNewElement()-> Propertie name [email]BBEEBBEE
+BBEEBBEE23.02.2026 14:32:26:600BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::slotNewElement()-> Propertie name [password]BBEEBBEE
+BBEEBBEE23.02.2026 14:32:26:601BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::slotNewElement()-> Propertie name [employee_groups]BBEEBBEE
+BBEEBBEE23.02.2026 14:32:33:400BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclMainWindow::slotDoIt() insert values  [zolly-deb]  [50]  [50]  [50]BBEEBBEE
+BBEEBBEE23.02.2026 14:32:33:400BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclMainWindow::slotDoIt() BBEEBBEE
+BBEEBBEE23.02.2026 14:34:18:560BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::initializeLibrarys -> Librarys initializedBBEEBBEE
+BBEEBBEE23.02.2026 14:34:18:561BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::readClassesFromXmlFile -> mapping file readedBBEEBBEE
+BBEEBBEE23.02.2026 14:34:18:561BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::readMethodsFromXmlFileGeneral -> mapping file readedBBEEBBEE
+BBEEBBEE23.02.2026 14:34:18:561BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::loadClasses -> ./Objects/libclOperation.soBBEEBBEE
+BBEEBBEE23.02.2026 14:34:18:562BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::callObjectDLL -> Library [./Objects/libclOperation.so] foundBBEEBBEE
+BBEEBBEE23.02.2026 14:34:18:562BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass loadedBBEEBBEE
+BBEEBBEE23.02.2026 14:34:18:562BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass after stockingBBEEBBEE
+BBEEBBEE23.02.2026 14:34:18:562BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclOperation::createPluginClass -> createdBBEEBBEE
+BBEEBBEE23.02.2026 14:34:18:563BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass calledBBEEBBEE
+BBEEBBEE23.02.2026 14:34:18:563BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::loadClasses() -> Propertie name [pkey]BBEEBBEE
+BBEEBBEE23.02.2026 14:34:18:563BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::loadClasses() -> Propertie name [name]BBEEBBEE
+BBEEBBEE23.02.2026 14:34:18:563BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::loadClasses() -> Propertie name [created_on]BBEEBBEE
+BBEEBBEE23.02.2026 14:34:18:563BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::loadClasses() -> Propertie name [object]BBEEBBEE
+BBEEBBEE23.02.2026 14:34:18:563BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::loadClasses() -> Propertie name [objects]BBEEBBEE
+BBEEBBEE23.02.2026 14:34:18:563BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::loadClasses() -> Propertie name [datum_start]BBEEBBEE
+BBEEBBEE23.02.2026 14:34:18:563BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::loadClasses() -> Propertie name [datum_stop]BBEEBBEE
+BBEEBBEE23.02.2026 14:34:18:563BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::loadClasses() -> Propertie name [h2o_value]BBEEBBEE
+BBEEBBEE23.02.2026 14:34:18:563BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::loadClasses() -> Propertie name [performed_workstep]BBEEBBEE
+BBEEBBEE23.02.2026 14:34:18:563BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::loadClasses() -> Propertie name [operation_state]BBEEBBEE
+BBEEBBEE23.02.2026 14:34:18:563BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::loadClasses() -> Propertie name [operation_source]BBEEBBEE
+BBEEBBEE23.02.2026 14:34:18:563BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::loadClasses() -> Propertie name [operation_closed_cause]BBEEBBEE
+BBEEBBEE23.02.2026 14:34:18:564BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::loadClasses() -> Propertie name [operation_error_information]BBEEBBEE
+BBEEBBEE23.02.2026 14:34:18:564BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::loadClasses -> ./Objects/libclErrorTable.soBBEEBBEE
+BBEEBBEE23.02.2026 14:34:18:564BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::callObjectDLL -> Library [./Objects/libclErrorTable.so] foundBBEEBBEE
+BBEEBBEE23.02.2026 14:34:18:564BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass loadedBBEEBBEE
+BBEEBBEE23.02.2026 14:34:18:564BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass after stockingBBEEBBEE
+BBEEBBEE23.02.2026 14:34:18:565BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass calledBBEEBBEE
+BBEEBBEE23.02.2026 14:34:18:565BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::loadClasses -> ./Objects/libclProduct.soBBEEBBEE
+BBEEBBEE23.02.2026 14:34:18:565BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::callObjectDLL -> Library [./Objects/libclProduct.so] not foundBBEEBBEE
+BBEEBBEE23.02.2026 14:34:18:565BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::loadClasses() -> Propertie name [pkey]BBEEBBEE
+BBEEBBEE23.02.2026 14:34:18:565BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::loadClasses() -> Propertie name [name]BBEEBBEE
+BBEEBBEE23.02.2026 14:34:18:565BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::loadClasses() -> Propertie name [created_on]BBEEBBEE
+BBEEBBEE23.02.2026 14:34:18:565BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::loadClasses() -> Propertie name [previous_workstep]BBEEBBEE
+BBEEBBEE23.02.2026 14:34:18:565BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::loadClasses() -> Propertie name [current_workstep]BBEEBBEE
+BBEEBBEE23.02.2026 14:34:18:565BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::loadClasses() -> Propertie name [next_workstep]BBEEBBEE
+BBEEBBEE23.02.2026 14:34:18:565BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::loadClasses() -> Propertie name [product_state]BBEEBBEE
+BBEEBBEE23.02.2026 14:34:18:565BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::loadClasses() -> Propertie name [product_ws_state]BBEEBBEE
+BBEEBBEE23.02.2026 14:34:18:565BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::loadClasses() -> Propertie name [product_index]BBEEBBEE
+BBEEBBEE23.02.2026 14:34:18:566BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::callObjectDLL -> Library [./Methods/libclCreateOperationForMachine.so] foundBBEEBBEE
+BBEEBBEE23.02.2026 14:34:18:566BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass loadedBBEEBBEE
+BBEEBBEE23.02.2026 14:34:18:566BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass after stockingBBEEBBEE
+BBEEBBEE23.02.2026 14:34:18:566BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass calledBBEEBBEE
+BBEEBBEE23.02.2026 14:34:18:567BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::callObjectDLL -> Library [./Methods/libclExportToExcel.so] foundBBEEBBEE
+BBEEBBEE23.02.2026 14:34:18:567BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass loadedBBEEBBEE
+BBEEBBEE23.02.2026 14:34:18:567BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass after stockingBBEEBBEE
+BBEEBBEE23.02.2026 14:34:18:567BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass calledBBEEBBEE
+BBEEBBEE23.02.2026 14:34:18:568BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::callObjectDLL -> Library [./Methods/libclContinueForMachine.so] foundBBEEBBEE
+BBEEBBEE23.02.2026 14:34:18:568BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass loadedBBEEBBEE
+BBEEBBEE23.02.2026 14:34:18:568BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass after stockingBBEEBBEE
+BBEEBBEE23.02.2026 14:34:18:568BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass calledBBEEBBEE
+BBEEBBEE23.02.2026 14:34:18:568BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::callObjectDLL -> Library [./Methods/libclPauseForMachine.so] foundBBEEBBEE
+BBEEBBEE23.02.2026 14:34:18:568BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass loadedBBEEBBEE
+BBEEBBEE23.02.2026 14:34:18:569BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass after stockingBBEEBBEE
+BBEEBBEE23.02.2026 14:34:18:569BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass calledBBEEBBEE
+BBEEBBEE23.02.2026 14:34:18:569BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::callObjectDLL -> Library [./Methods/libclRunForMachine.so] foundBBEEBBEE
+BBEEBBEE23.02.2026 14:34:18:570BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass loadedBBEEBBEE
+BBEEBBEE23.02.2026 14:34:18:570BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass after stockingBBEEBBEE
+BBEEBBEE23.02.2026 14:34:18:570BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass calledBBEEBBEE
+BBEEBBEE23.02.2026 14:34:18:570BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::callObjectDLL -> Library [./Methods/libclOpenLinkedDoc.so] not foundBBEEBBEE
+BBEEBBEE23.02.2026 14:34:18:570BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::callObjectDLL -> Library [./Methods/libclSaveLinkedDoc.so] not foundBBEEBBEE
+BBEEBBEE23.02.2026 14:34:18:571BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::callObjectDLL -> Library [./Methods/libclCreateQrCodeOfObject.so] foundBBEEBBEE
+BBEEBBEE23.02.2026 14:34:18:571BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass loadedBBEEBBEE
+BBEEBBEE23.02.2026 14:34:18:571BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass after stockingBBEEBBEE
+BBEEBBEE23.02.2026 14:34:18:571BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass calledBBEEBBEE
+BBEEBBEE23.02.2026 14:34:18:572BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::callObjectDLL -> Library [./Methods/libclShowQrCodeOfObject.so] foundBBEEBBEE
+BBEEBBEE23.02.2026 14:34:18:572BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass loadedBBEEBBEE
+BBEEBBEE23.02.2026 14:34:18:572BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass after stockingBBEEBBEE
+BBEEBBEE23.02.2026 14:34:18:572BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass calledBBEEBBEE
+BBEEBBEE23.02.2026 14:34:21:500BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::clObjectViewer -> Config file is [classConfigurationView_01.xml]BBEEBBEE
+BBEEBBEE23.02.2026 14:34:21:501BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::readXMLconfigFile -> mapping file readedBBEEBBEE
+BBEEBBEE23.02.2026 14:34:22:947BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::slotButtonRefreshPressed()SELECT * FROM pg_tables WHERE schemaname='public'; -> OKBBEEBBEE
+BBEEBBEE23.02.2026 14:34:22:947BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::slotButtonRefreshPressed()TABLE:[a_customer][a_allergy][a_food_texture][customer][a_customer_remark][allergy][a_does_not_like][customer_remark][a_diet][food_texture][diet][does_not_like][a_food_portion][food_portion][a_paper][a_food_place][paper][food_place][a_food_bread][food_bread][a_food_butter][a_food_charcuterie][food_butter][a_food_drink][food_drink][a_food_drinkserivce][a_food_sugar][food_drinkserivce][food_charcuterie][food_sugar][a_food_dessert][food_dinner][food_dessert][a_food_breakfast][a_food_lunch][food_breakfast][a_food_dinner][food_lunch][a_cycles][cycles][a_cycle_routine][cycle_routine][a_batch][batch][a_product][a_employee][product][a_mach_group][a_empl_group][a_linkeddoc][mach_group][a_planning][employee][shift][planning][a_shift][operation][a_operation][empl_group][a_object_to_locate][living_obj_location][linkeddoc][a_workstep][a_errors_living_obj_location][living_obj_mach][a_errors_living_obj_mach][workstep][a_living_obj_mach][errors_living_obj_mach][a_living_obj_location][errors_living_obj_location][object_to_locate][a_rti_add_customer][rti_add_customer][a_rti_add_phone][rti_add_phone][a_rti_add_chef][rti_add_chef]BBEEBBEE
+BBEEBBEE23.02.2026 14:34:22:948BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 14:34:22:948BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::createClassesInTreeView -> bool clDatabasePostgres::getFromTableGeneral(QString paTableName,QString paStartValue, QString paMaxValue,vector <QString> &paReturnId, QString &paMessage) -> "SELECT pkey,action_name FROM a_a_ LIMIT 1000 OFFSET 0;" command failed ...BBEEBBEE
+BBEEBBEE23.02.2026 14:34:22:948BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::createClassesInTreeView -> Added table [employee]BBEEBBEE
+BBEEBBEE23.02.2026 14:34:22:948BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 14:34:22:949BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::createClassesInTreeView -> bool clDatabasePostgres::getFromTableGeneral(QString paTableName,QString paStartValue, QString paMaxValue,vector <QString> &paReturnId, QString &paMessage) -> "SELECT pkey,action_name FROM a_a_ LIMIT 1000 OFFSET 0;" command failed ...BBEEBBEE
+BBEEBBEE23.02.2026 14:34:22:949BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::createClassesInTreeView -> Added table [empl_group]BBEEBBEE
+BBEEBBEE23.02.2026 14:34:24:264BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::slotTreeClassItemPressed -> SELECT pkey,name FROM employee LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 14:34:26:342BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::slotTreeClassItemPressed -> SELECT pkey,name,sure_name,famely_name,email,password,employee_groups,to_char(created_on,'YYYY-MM-DD HH24:MI:SS.MS') FROM employee WHERE pkey= '365ac3a6-10b6-11f1-8000-0072ee7de312'; -> OKBBEEBBEE
+BBEEBBEE23.02.2026 14:34:26:347BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::slotTreeClassItemPressed -> SELECT pkey,action_name FROM a_employee LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 14:34:27:963BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::slotTreeClassItemPressed -> SELECT pkey,name,sure_name,famely_name,email,password,employee_groups,to_char(created_on,'YYYY-MM-DD HH24:MI:SS.MS') FROM employee WHERE pkey= '365ac3a6-10b6-11f1-8000-0072ee7de312'; -> OKBBEEBBEE
+BBEEBBEE23.02.2026 14:34:27:967BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::slotTreeClassItemPressed -> SELECT pkey,action_name FROM a_employee LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 14:34:28:402BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclMainWindow::slotDoIt() insert values  [zolly-deb]  [50]  [50]  [50]BBEEBBEE
+BBEEBBEE23.02.2026 14:34:28:403BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclMainWindow::slotDoIt() BBEEBBEE
+BBEEBBEE23.02.2026 14:34:30:126BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::slotDeleteElement()-> Getting properties for table name=customerBBEEBBEE
+BBEEBBEE23.02.2026 14:34:30:127BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::slotDeleteElement()-> Getting properties for table name=allergyBBEEBBEE
+BBEEBBEE23.02.2026 14:34:30:127BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::slotDeleteElement()-> Getting properties for table name=customer_remarkBBEEBBEE
+BBEEBBEE23.02.2026 14:34:30:128BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::slotDeleteElement()-> Getting properties for table name=food_textureBBEEBBEE
+BBEEBBEE23.02.2026 14:34:30:128BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::slotDeleteElement()-> Getting properties for table name=dietBBEEBBEE
+BBEEBBEE23.02.2026 14:34:30:129BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::slotDeleteElement()-> Getting properties for table name=does_not_likeBBEEBBEE
+BBEEBBEE23.02.2026 14:34:30:129BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::slotDeleteElement()-> Getting properties for table name=food_portionBBEEBBEE
+BBEEBBEE23.02.2026 14:34:30:129BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::slotDeleteElement()-> Getting properties for table name=paperBBEEBBEE
+BBEEBBEE23.02.2026 14:34:30:129BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::slotDeleteElement()-> Getting properties for table name=food_placeBBEEBBEE
+BBEEBBEE23.02.2026 14:34:30:130BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::slotDeleteElement()-> Getting properties for table name=food_breadBBEEBBEE
+BBEEBBEE23.02.2026 14:34:30:130BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::slotDeleteElement()-> Getting properties for table name=food_butterBBEEBBEE
+BBEEBBEE23.02.2026 14:34:30:130BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::slotDeleteElement()-> Getting properties for table name=food_drinkBBEEBBEE
+BBEEBBEE23.02.2026 14:34:30:130BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::slotDeleteElement()-> Getting properties for table name=food_drinkserivceBBEEBBEE
+BBEEBBEE23.02.2026 14:34:30:131BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::slotDeleteElement()-> Getting properties for table name=food_charcuterieBBEEBBEE
+BBEEBBEE23.02.2026 14:34:30:131BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::slotDeleteElement()-> Getting properties for table name=food_sugarBBEEBBEE
+BBEEBBEE23.02.2026 14:34:30:131BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::slotDeleteElement()-> Getting properties for table name=food_dinnerBBEEBBEE
+BBEEBBEE23.02.2026 14:34:30:131BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::slotDeleteElement()-> Getting properties for table name=food_dessertBBEEBBEE
+BBEEBBEE23.02.2026 14:34:30:131BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::slotDeleteElement()-> Getting properties for table name=food_breakfastBBEEBBEE
+BBEEBBEE23.02.2026 14:34:30:131BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::slotDeleteElement()-> Getting properties for table name=food_lunchBBEEBBEE
+BBEEBBEE23.02.2026 14:34:30:132BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::slotDeleteElement()-> Getting properties for table name=cyclesBBEEBBEE
+BBEEBBEE23.02.2026 14:34:30:132BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::slotDeleteElement()-> Getting properties for table name=cycle_routineBBEEBBEE
+BBEEBBEE23.02.2026 14:34:30:132BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::slotDeleteElement()-> Getting properties for table name=batchBBEEBBEE
+BBEEBBEE23.02.2026 14:34:30:132BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::slotDeleteElement()-> Getting properties for table name=productBBEEBBEE
+BBEEBBEE23.02.2026 14:34:30:132BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::slotDeleteElement()-> Getting properties for table name=mach_groupBBEEBBEE
+BBEEBBEE23.02.2026 14:34:30:133BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::slotDeleteElement()-> Getting properties for table name=employeeBBEEBBEE
+BBEEBBEE23.02.2026 14:34:30:133BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::slotDeleteElement()-> Getting properties for table name=shiftBBEEBBEE
+BBEEBBEE23.02.2026 14:34:30:133BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::slotDeleteElement()-> Getting properties for table name=planningBBEEBBEE
+BBEEBBEE23.02.2026 14:34:30:133BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::slotDeleteElement()-> Getting properties for table name=operationBBEEBBEE
+BBEEBBEE23.02.2026 14:34:30:135BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::slotDeleteElement()-> Getting properties for table name=empl_groupBBEEBBEE
+BBEEBBEE23.02.2026 14:34:30:135BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::slotDeleteElement()-> Getting properties for table name=living_obj_locationBBEEBBEE
+BBEEBBEE23.02.2026 14:34:30:135BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::slotDeleteElement()-> Getting properties for table name=linkeddocBBEEBBEE
+BBEEBBEE23.02.2026 14:34:30:135BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::slotDeleteElement()-> Getting properties for table name=living_obj_machBBEEBBEE
+BBEEBBEE23.02.2026 14:34:30:135BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::slotDeleteElement()-> Getting properties for table name=workstepBBEEBBEE
+BBEEBBEE23.02.2026 14:34:30:136BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::slotDeleteElement()-> Getting properties for table name=errors_living_obj_machBBEEBBEE
+BBEEBBEE23.02.2026 14:34:30:136BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::slotDeleteElement()-> Getting properties for table name=errors_living_obj_locationBBEEBBEE
+BBEEBBEE23.02.2026 14:34:30:136BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::slotDeleteElement()-> Getting properties for table name=object_to_locateBBEEBBEE
+BBEEBBEE23.02.2026 14:34:30:137BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::slotDeleteElement()-> Getting properties for table name=rti_add_customerBBEEBBEE
+BBEEBBEE23.02.2026 14:34:30:138BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::slotDeleteElement()-> Getting properties for table name=rti_add_phoneBBEEBBEE
+BBEEBBEE23.02.2026 14:34:30:138BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::slotDeleteElement()-> Getting properties for table name=rti_add_chefBBEEBBEE
+BBEEBBEE23.02.2026 14:34:30:140BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::slotDeleteElement() -> DELETE FROM employee WHERE pkey='365ac3a6-10b6-11f1-8000-0072ee7de312';-> OKBBEEBBEE
+BBEEBBEE23.02.2026 14:34:32:123BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::slotTreeClassItemPressed -> SELECT pkey,name FROM employee LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 14:34:33:913BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::slotTreeClassItemPressed -> SELECT pkey,name FROM employee LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 14:34:34:149BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::slotTreeClassItemPressed -> SELECT pkey,name FROM employee LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 14:34:36:082BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::slotNewElement()-> Table name=employeeBBEEBBEE
+BBEEBBEE23.02.2026 14:34:36:085BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::slotNewElement()-> Amount of properties=8BBEEBBEE
+BBEEBBEE23.02.2026 14:34:36:086BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::slotNewElement()-> Propertie name [name]BBEEBBEE
+BBEEBBEE23.02.2026 14:34:36:087BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::slotNewElement()-> Propertie name [email]BBEEBBEE
+BBEEBBEE23.02.2026 14:34:36:088BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::slotNewElement()-> Propertie name [password]BBEEBBEE
+BBEEBBEE23.02.2026 14:34:36:089BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::slotNewElement()-> Propertie name [employee_groups]BBEEBBEE
+BBEEBBEE23.02.2026 14:34:38:400BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclMainWindow::slotDoIt() insert values  [zolly-deb]  [50]  [50]  [50]BBEEBBEE
+BBEEBBEE23.02.2026 14:34:38:402BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclMainWindow::slotDoIt() BBEEBBEE
+BBEEBBEE23.02.2026 14:34:48:401BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclMainWindow::slotDoIt() insert values  [zolly-deb]  [50]  [50]  [50]BBEEBBEE
+BBEEBBEE23.02.2026 14:34:48:402BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclMainWindow::slotDoIt() BBEEBBEE
+BBEEBBEE23.02.2026 14:34:51:971BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::slotNewElement() -> INSERT INTO employee (name,email,password,employee_groups) VALUES ('jolly','test@gmail.com','1234',ARRAY[]::uuid[]);-> OKBBEEBBEE
+BBEEBBEE23.02.2026 14:34:53:667BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::slotTreeClassItemPressed -> SELECT pkey,name FROM employee LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 14:34:55:701BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::slotTreeClassItemPressed -> SELECT pkey,name FROM empl_group LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 14:34:56:816BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::slotNewElement()-> Table name=empl_groupBBEEBBEE
+BBEEBBEE23.02.2026 14:34:56:819BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::slotNewElement()-> Amount of properties=5BBEEBBEE
+BBEEBBEE23.02.2026 14:34:56:820BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::slotNewElement()-> Propertie name [name]BBEEBBEE
+BBEEBBEE23.02.2026 14:34:56:821BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::slotNewElement()-> Propertie name [description]BBEEBBEE
+BBEEBBEE23.02.2026 14:34:56:822BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::slotNewElement()-> Propertie name [level]BBEEBBEE
+BBEEBBEE23.02.2026 14:34:56:823BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::slotNewElement()-> Propertie name [created_on]BBEEBBEE
+BBEEBBEE23.02.2026 14:34:56:825BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclComboBoxExtend::initializeElements -> Cound not open file '.\CONFIG\enumns.xml' ...BBEEBBEE
+BBEEBBEE23.02.2026 14:34:56:827BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclComboBoxExtend::initializeElements -> Cound not open file '.\CONFIG\enumns.xml' ...BBEEBBEE
+BBEEBBEE23.02.2026 14:34:58:400BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclMainWindow::slotDoIt() insert values  [zolly-deb]  [50]  [50]  [50]BBEEBBEE
+BBEEBBEE23.02.2026 14:34:58:401BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclMainWindow::slotDoIt() BBEEBBEE
+BBEEBBEE23.02.2026 14:35:08:401BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclMainWindow::slotDoIt() insert values  [zolly-deb]  [50]  [50]  [50]BBEEBBEE
+BBEEBBEE23.02.2026 14:35:08:403BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclMainWindow::slotDoIt() BBEEBBEE
+BBEEBBEE23.02.2026 14:35:16:148BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclComboBoxExtend::initializeElements -> Cound not open file '.\CONFIG\enumns.xml' ...BBEEBBEE
+BBEEBBEE23.02.2026 14:35:16:156BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::slotNewElement() -> INSERT INTO empl_group (name,description,level,created_on) VALUES ('R&D','Research and development',0, to_timestamp('2026-02-23 14:34:56.828', 'YYYY-MM-DD HH24:MI:SS.MS'));-> OKBBEEBBEE
+BBEEBBEE23.02.2026 14:35:17:830BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::slotTreeClassItemPressed -> SELECT pkey,name FROM empl_group LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 14:35:18:401BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclMainWindow::slotDoIt() insert values  [zolly-deb]  [50]  [50]  [50]BBEEBBEE
+BBEEBBEE23.02.2026 14:35:18:402BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclMainWindow::slotDoIt() BBEEBBEE
+BBEEBBEE23.02.2026 14:35:20:526BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::slotTreeClassItemPressed -> SELECT pkey,name,sure_name,famely_name,email,password,employee_groups,to_char(created_on,'YYYY-MM-DD HH24:MI:SS.MS') FROM employee WHERE pkey= '365ac3e6-10b6-11f1-8000-0072ee7de312'; -> OKBBEEBBEE
+BBEEBBEE23.02.2026 14:35:20:531BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::slotTreeClassItemPressed -> SELECT pkey,action_name FROM a_employee LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 14:35:22:069BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::slotEditElement()-> Table name=employeeBBEEBBEE
+BBEEBBEE23.02.2026 14:35:22:071BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::slotEditElement()-> Amount of properties=8BBEEBBEE
+BBEEBBEE23.02.2026 14:35:22:072BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::slotEditElement()-> Propertie name [pkey]BBEEBBEE
+BBEEBBEE23.02.2026 14:35:22:074BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::slotEditElement()-> Propertie name [name]BBEEBBEE
+BBEEBBEE23.02.2026 14:35:22:075BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::slotEditElement()-> Propertie name [email]BBEEBBEE
+BBEEBBEE23.02.2026 14:35:22:076BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::slotEditElement()-> Propertie name [password]BBEEBBEE
+BBEEBBEE23.02.2026 14:35:22:077BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::slotEditElement()-> Propertie name [employee_groups]BBEEBBEE
+BBEEBBEE23.02.2026 14:35:22:082BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::slotEditElement -> SELECT pkey,name,email,password,employee_groups FROM employee WHERE pkey= '365ac3e6-10b6-11f1-8000-0072ee7de312'; -> OKBBEEBBEE
+BBEEBBEE23.02.2026 14:35:28:401BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclMainWindow::slotDoIt() insert values  [zolly-deb]  [50]  [50]  [50]BBEEBBEE
+BBEEBBEE23.02.2026 14:35:28:402BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclMainWindow::slotDoIt() BBEEBBEE
+BBEEBBEE23.02.2026 14:35:29:113BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclListWidgetExtendForObject::slotButtonAddPressed() -> BBEEBBEE
+BBEEBBEE23.02.2026 14:35:32:573BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::slotEditElement() -> UPDATE employee SET  name='jolly' , email='test@gmail.com' , password='1234' , employee_groups=ARRAY[CAST('365ac426-10b6-11f1-8000-0072ee7de312' AS uuid)]::uuid[] WHERE pkey = '365ac3e6-10b6-11f1-8000-0072ee7de312';-> OKBBEEBBEE
+BBEEBBEE23.02.2026 14:35:38:401BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclMainWindow::slotDoIt() insert values  [zolly-deb]  [50]  [50]  [50]BBEEBBEE
+BBEEBBEE23.02.2026 14:35:38:402BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclMainWindow::slotDoIt() BBEEBBEE
+BBEEBBEE23.02.2026 14:35:38:720BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::slotTreeClassItemPressed -> SELECT pkey,name,sure_name,famely_name,email,password,employee_groups,to_char(created_on,'YYYY-MM-DD HH24:MI:SS.MS') FROM employee WHERE pkey= '365ac3e6-10b6-11f1-8000-0072ee7de312'; -> OKBBEEBBEE
+BBEEBBEE23.02.2026 14:35:38:725BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::slotTreeClassItemPressed -> SELECT pkey,action_name FROM a_employee LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 14:35:38:727BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::addElementsToQTreeWidgetSub -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 14:35:38:732BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclObjectViewer::addElementsToQTreeWidgetSub -> SELECT name FROM EMPL_GROUP WHERE pkey= '365ac426-10b6-11f1-8000-0072ee7de312'; -> OKBBEEBBEE
+BBEEBBEE23.02.2026 14:35:48:403BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclMainWindow::slotDoIt() insert values  [zolly-deb]  [50]  [50]  [50]BBEEBBEE
+BBEEBBEE23.02.2026 14:35:48:404BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclMainWindow::slotDoIt() BBEEBBEE
+BBEEBBEE23.02.2026 14:35:51:214BBEE50BBEEzolly-debBBEE2UVObjectViewer.exeBBEEclProductPlanner::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE

@@ -1,0 +1,47 @@
+Import ('env')
+myenv = env
+
+
+InstallDir = myenv['BINDIR_LogServer']
+################################ INSTALL THE LOG SERVER ###################################
+SourcesQtTest = [ 'clMain.cpp',
+                  'clLogServer.cpp',
+                  'clLogServer_impl.cpp',
+                  myenv.Moc('clLogServer.h'),
+                  'ICE_LogApplication.cpp',
+                  'clFileWriter.cpp'
+                 ]
+                 
+LoggingProg = myenv.Program('clLoggingServer', SourcesQtTest, 
+                  LIBS=['libQt5Widgets',
+                    'libQt5Core',
+                    'libQt5Xml',
+                  	'libpq',
+                  	'libIce',
+                    'libIceDiscovery',
+                    'libIceLocatorDiscovery',
+                    'libIceSSL'
+                    ])                        
+myenv.Install (InstallDir, LoggingProg)
+
+################################### INSTALL THE LOG CLIENT ###################################
+SourceLogClient = [	'Client.cpp',
+	  		myenv.Moc('clClientApplication.h'),
+			 'clClientApplication.cpp',
+			 myenv.QT4UI('wdClientLogger.ui')[1:],
+			 'clIceClient.cpp',
+			 'ICE_LogApplication.cpp'
+			]
+			
+LoggingClient = myenv.Program('clLoggingClient',SourceLogClient,
+                  LIBS=['libQt5Widgets',
+                    'libQt5Core',
+                    'libQt5Xml',
+                  	'libpq',
+                  	'libIce',
+                    'libIceDiscovery',
+                    'libIceLocatorDiscovery',
+                    'libIceSSL'
+                    ])
+                        
+myenv.Install (InstallDir, LoggingClient)

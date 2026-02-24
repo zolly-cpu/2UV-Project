@@ -1,0 +1,574 @@
+BBEEBBEE23.02.2026 13:32:51:849BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::slotTreeClassItemPressed -> SELECT pkey,name FROM object_to_locate LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 13:32:52:218BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::slotTreeClassItemPressed -> SELECT pkey,name FROM object_to_locate LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 13:32:53:287BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::slotTreeClassItemPressed -> SELECT pkey,name FROM object_to_locate LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 13:32:54:391BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::slotNewElement()-> Table name=object_to_locateBBEEBBEE
+BBEEBBEE23.02.2026 13:32:54:393BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::slotNewElement()-> Amount of properties=11BBEEBBEE
+BBEEBBEE23.02.2026 13:32:54:394BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::slotNewElement()-> Propertie name [pkey]BBEEBBEE
+BBEEBBEE23.02.2026 13:32:54:395BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::slotNewElement()-> Propertie name [name]BBEEBBEE
+BBEEBBEE23.02.2026 13:32:54:396BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::slotNewElement()-> Propertie name [created_on]BBEEBBEE
+BBEEBBEE23.02.2026 13:32:54:398BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::slotNewElement()-> Propertie name [object_to_locate_kind]BBEEBBEE
+BBEEBBEE23.02.2026 13:32:54:399BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::slotNewElement()-> Propertie name [obj_location_id]BBEEBBEE
+BBEEBBEE23.02.2026 13:32:54:400BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::slotNewElement()-> Propertie name [qr_bar_code]BBEEBBEE
+BBEEBBEE23.02.2026 13:32:54:401BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::slotNewElement()-> Propertie name [ssid]BBEEBBEE
+BBEEBBEE23.02.2026 13:32:54:402BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::slotNewElement()-> Propertie name [included_object]BBEEBBEE
+BBEEBBEE23.02.2026 13:32:54:403BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::slotNewElement()-> Propertie name [coord_x]BBEEBBEE
+BBEEBBEE23.02.2026 13:32:54:404BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::slotNewElement()-> Propertie name [coord_y]BBEEBBEE
+BBEEBBEE23.02.2026 13:32:54:405BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::slotNewElement()-> Propertie name [coord_z]BBEEBBEE
+BBEEBBEE23.02.2026 13:33:01:456BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclObject::insertObject() -> ...bool clDatabasePostgres::getValuesString -> Error in building values ...BBEEBBEE
+BBEEBBEE23.02.2026 13:33:01:461BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclObject::insertObject() -> ...bool clDatabasePostgres::getFromTableByProperty(QString paTableName, QString paStartValue, QString paMaxValue,vector <QString> paProperties,vector <QString> paValue, vector <QString> paTypeValue, vector <QString> paLogExp, vector <QString> &paReturnId,QString &paMessage) -> "SELECT pkey FROM  WHERE name = 'test' AND created_on AND object_to_locate_kind = 0 AND obj_location_id is NULL AND qr_bar_code = '' AND ssid = '' AND included_object is NULL AND coord_x =  AND coord_y =  AND coord_z =  LIMIT 1000 OFFSET 0;" command failed ...BBEEBBEE
+BBEEBBEE23.02.2026 13:33:01:462BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclObject::insertObject() -> problem no objects foundBBEEBBEE
+BBEEBBEE23.02.2026 13:33:01:463BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::slotNewElement() -> BBEEBBEE
+BBEEBBEE23.02.2026 13:34:49:355BBEE1BBEEzolly-debBBEE2UVServer.exeBBEEclMainWindow::createActions() -> startBBEEBBEE
+BBEEBBEE23.02.2026 13:34:49:355BBEE1BBEEzolly-debBBEE2UVServer.exeBBEEclMainWindow::createActions() -> stopBBEEBBEE
+BBEEBBEE23.02.2026 13:34:49:355BBEE1BBEEzolly-debBBEE2UVLogServer.exeBBEEclMainWindow::initializeIceServer -> StartBBEEBBEE
+BBEEBBEE23.02.2026 13:34:49:363BBEE1BBEEzolly-debBBEE2UVServer.exeBBEEclServerThread::createDatabaseConfiguration() -> clXMLReader::readDatabaseConfiguration(QString paFileName, vector<clDatabaseTable> & paDatabaseTable, QString &paReturnMessage) -> readed database structure ...BBEEBBEE
+BBEEBBEE23.02.2026 13:34:49:376BBEE1BBEEzolly-debBBEE2UVServer.exeBBEEclDatabasePostgres::ConnectDB(QString &paMessage) -> Connection to database ok ...BBEEBBEE
+BBEEBBEE23.02.2026 13:34:54:450BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclLivingObject::getLivingObjectsForThisWorkstation() -> SELECT pkey FROM living_obj_mach WHERE WORKSTATION_NAME = 'zolly-deb' LIMIT ALL OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 13:34:54:451BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclWorkstationCycles::getWorkstationCycles() -> SELECT pkey FROM cycles WHERE WORKSTATION_NAME = 'zolly-deb' LIMIT ALL OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 13:34:54:451BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::initializeLibrarys -> Librarys initializedBBEEBBEE
+BBEEBBEE23.02.2026 13:34:54:452BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::readClassesFromXmlFile -> mapping file readedBBEEBBEE
+BBEEBBEE23.02.2026 13:34:54:452BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::readMethodsFromXmlFileGeneral -> mapping file readedBBEEBBEE
+BBEEBBEE23.02.2026 13:34:54:452BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::loadClasses -> ./Objects/libclOperation.soBBEEBBEE
+BBEEBBEE23.02.2026 13:34:54:452BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::callObjectDLL -> Library [./Objects/libclOperation.so] foundBBEEBBEE
+BBEEBBEE23.02.2026 13:34:54:453BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass loadedBBEEBBEE
+BBEEBBEE23.02.2026 13:34:54:453BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass after stockingBBEEBBEE
+BBEEBBEE23.02.2026 13:34:54:453BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass calledBBEEBBEE
+BBEEBBEE23.02.2026 13:34:54:453BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::loadClasses() -> Propertie name [PKEY]BBEEBBEE
+BBEEBBEE23.02.2026 13:34:54:453BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::loadClasses() -> Propertie name [NAME]BBEEBBEE
+BBEEBBEE23.02.2026 13:34:54:453BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::loadClasses() -> Propertie name [CREATED_ON]BBEEBBEE
+BBEEBBEE23.02.2026 13:34:54:453BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::loadClasses() -> Propertie name [OBJECT]BBEEBBEE
+BBEEBBEE23.02.2026 13:34:54:453BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::loadClasses() -> Propertie name [OBJECTS]BBEEBBEE
+BBEEBBEE23.02.2026 13:34:54:453BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::loadClasses() -> Propertie name [DATUM_START]BBEEBBEE
+BBEEBBEE23.02.2026 13:34:54:453BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::loadClasses() -> Propertie name [DATUM_STOP]BBEEBBEE
+BBEEBBEE23.02.2026 13:34:54:453BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::loadClasses() -> Propertie name [H2O_VALUE]BBEEBBEE
+BBEEBBEE23.02.2026 13:34:54:453BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::loadClasses() -> Propertie name [PERFORMED_WORKSTEP]BBEEBBEE
+BBEEBBEE23.02.2026 13:34:54:453BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::loadClasses() -> Propertie name [OPERATION_STATE]BBEEBBEE
+BBEEBBEE23.02.2026 13:34:54:453BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::loadClasses() -> Propertie name [OPERATION_SOURCE]BBEEBBEE
+BBEEBBEE23.02.2026 13:34:54:453BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::loadClasses() -> Propertie name [OPERATION_CLOSED_CAUSE]BBEEBBEE
+BBEEBBEE23.02.2026 13:34:54:453BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::loadClasses() -> Propertie name [OPERATION_ERROR_INFORMATION]BBEEBBEE
+BBEEBBEE23.02.2026 13:34:54:453BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::loadClasses -> ./Objects/libclErrorTable.soBBEEBBEE
+BBEEBBEE23.02.2026 13:34:54:454BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::callObjectDLL -> Library [./Objects/libclErrorTable.so] foundBBEEBBEE
+BBEEBBEE23.02.2026 13:34:54:454BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass loadedBBEEBBEE
+BBEEBBEE23.02.2026 13:34:54:454BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass after stockingBBEEBBEE
+BBEEBBEE23.02.2026 13:34:54:454BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass calledBBEEBBEE
+BBEEBBEE23.02.2026 13:34:54:454BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::callObjectDLL -> Library [./Methods/libclCreateOperationForMachine.so] foundBBEEBBEE
+BBEEBBEE23.02.2026 13:34:54:454BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass loadedBBEEBBEE
+BBEEBBEE23.02.2026 13:34:54:454BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass after stockingBBEEBBEE
+BBEEBBEE23.02.2026 13:34:54:454BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass calledBBEEBBEE
+BBEEBBEE23.02.2026 13:34:54:455BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::callObjectDLL -> Library [./Methods/libclExportToExcel.so] foundBBEEBBEE
+BBEEBBEE23.02.2026 13:34:54:455BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass loadedBBEEBBEE
+BBEEBBEE23.02.2026 13:34:54:455BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass after stockingBBEEBBEE
+BBEEBBEE23.02.2026 13:34:54:455BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass calledBBEEBBEE
+BBEEBBEE23.02.2026 13:34:54:455BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::callObjectDLL -> Library [./Methods/libclContinueForMachine.so] foundBBEEBBEE
+BBEEBBEE23.02.2026 13:34:54:455BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass loadedBBEEBBEE
+BBEEBBEE23.02.2026 13:34:54:455BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass after stockingBBEEBBEE
+BBEEBBEE23.02.2026 13:34:54:455BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass calledBBEEBBEE
+BBEEBBEE23.02.2026 13:34:54:456BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::callObjectDLL -> Library [./Methods/libclPauseForMachine.so] foundBBEEBBEE
+BBEEBBEE23.02.2026 13:34:54:456BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass loadedBBEEBBEE
+BBEEBBEE23.02.2026 13:34:54:456BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass after stockingBBEEBBEE
+BBEEBBEE23.02.2026 13:34:54:456BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass calledBBEEBBEE
+BBEEBBEE23.02.2026 13:34:54:456BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::callObjectDLL -> Library [./Methods/libclRunForMachine.so] foundBBEEBBEE
+BBEEBBEE23.02.2026 13:34:54:456BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass loadedBBEEBBEE
+BBEEBBEE23.02.2026 13:34:54:456BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass after stockingBBEEBBEE
+BBEEBBEE23.02.2026 13:34:54:457BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass calledBBEEBBEE
+BBEEBBEE23.02.2026 13:34:54:457BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::callObjectDLL -> Library [./Methods/libclOpenLinkedDoc.so] not foundBBEEBBEE
+BBEEBBEE23.02.2026 13:34:54:457BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::callObjectDLL -> Library [./Methods/libclSaveLinkedDoc.so] not foundBBEEBBEE
+BBEEBBEE23.02.2026 13:34:54:457BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::callObjectDLL -> Library [./Methods/libclCreateQrCodeOfObject.so] foundBBEEBBEE
+BBEEBBEE23.02.2026 13:34:54:457BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass loadedBBEEBBEE
+BBEEBBEE23.02.2026 13:34:54:457BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass after stockingBBEEBBEE
+BBEEBBEE23.02.2026 13:34:54:457BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass calledBBEEBBEE
+BBEEBBEE23.02.2026 13:34:54:458BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::callObjectDLL -> Library [./Methods/libclShowQrCodeOfObject.so] foundBBEEBBEE
+BBEEBBEE23.02.2026 13:34:54:458BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass loadedBBEEBBEE
+BBEEBBEE23.02.2026 13:34:54:458BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass after stockingBBEEBBEE
+BBEEBBEE23.02.2026 13:34:54:458BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass calledBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:651BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::slotButtonRefreshPressed()SELECT * FROM pg_tables WHERE schemaname='public'; -> OKBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:652BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::slotButtonRefreshPressed()TABLE:[a_customer][a_allergy][a_food_texture][customer][a_customer_remark][allergy][a_does_not_like][customer_remark][a_diet][food_texture][diet][does_not_like][a_food_portion][food_portion][a_paper][a_food_place][paper][food_place][a_food_bread][food_bread][a_food_butter][a_food_charcuterie][food_butter][a_food_drink][food_drink][a_food_drinkserivce][a_food_sugar][food_drinkserivce][food_charcuterie][food_sugar][a_food_dessert][food_dinner][food_dessert][a_food_breakfast][a_food_lunch][food_breakfast][a_food_dinner][food_lunch][a_cycles][cycles][a_cycle_routine][cycle_routine][a_batch][batch][a_product][a_employee][product][a_mach_group][a_empl_group][a_linkeddoc][mach_group][a_planning][employee][shift][planning][a_shift][operation][a_operation][empl_group][a_object_to_locate][living_obj_location][linkeddoc][a_workstep][a_errors_living_obj_location][living_obj_mach][a_errors_living_obj_mach][workstep][a_living_obj_mach][errors_living_obj_mach][a_living_obj_location][errors_living_obj_location][object_to_locate][a_rti_add_customer][rti_add_customer][a_rti_add_phone][rti_add_phone][a_rti_add_chef][rti_add_chef]BBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:653BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:653BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [a_customer]BBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:654BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:654BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [a_allergy]BBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:655BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:655BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [a_food_texture]BBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:656BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:657BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> SELECT pkey,action_name FROM a_customer LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:657BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [customer]BBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:658BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:658BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [a_customer_remark]BBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:659BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:659BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> SELECT pkey,action_name FROM a_allergy LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:660BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [allergy]BBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:660BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:660BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [a_does_not_like]BBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:661BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:661BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> SELECT pkey,action_name FROM a_customer_remark LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:662BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [customer_remark]BBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:662BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:662BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [a_diet]BBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:662BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:663BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> SELECT pkey,action_name FROM a_food_texture LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:663BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [food_texture]BBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:663BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:664BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> SELECT pkey,action_name FROM a_diet LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:664BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [diet]BBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:664BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:665BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> SELECT pkey,action_name FROM a_does_not_like LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:665BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [does_not_like]BBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:665BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:666BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [a_food_portion]BBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:666BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:666BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> SELECT pkey,action_name FROM a_food_portion LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:667BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [food_portion]BBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:667BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:667BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [a_paper]BBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:667BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:667BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [a_food_place]BBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:668BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:668BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> SELECT pkey,action_name FROM a_paper LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:668BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [paper]BBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:669BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:669BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> SELECT pkey,action_name FROM a_food_place LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:669BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [food_place]BBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:670BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:670BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [a_food_bread]BBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:670BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:671BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> SELECT pkey,action_name FROM a_food_bread LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:671BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [food_bread]BBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:671BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:671BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [a_food_butter]BBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:671BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:672BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [a_food_charcuterie]BBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:672BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:672BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> SELECT pkey,action_name FROM a_food_butter LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:673BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [food_butter]BBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:673BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:673BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [a_food_drink]BBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:673BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:674BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> SELECT pkey,action_name FROM a_food_drink LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:674BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [food_drink]BBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:674BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:674BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [a_food_drinkserivce]BBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:675BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:675BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [a_food_sugar]BBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:675BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:676BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> SELECT pkey,action_name FROM a_food_drinkserivce LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:676BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [food_drinkserivce]BBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:676BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:677BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> SELECT pkey,action_name FROM a_food_charcuterie LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:678BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [food_charcuterie]BBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:678BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:679BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> SELECT pkey,action_name FROM a_food_sugar LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:679BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [food_sugar]BBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:679BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:679BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [a_food_dessert]BBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:679BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:680BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> SELECT pkey,action_name FROM a_food_dinner LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:680BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [food_dinner]BBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:681BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:681BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> SELECT pkey,action_name FROM a_food_dessert LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:681BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [food_dessert]BBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:682BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:682BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [a_food_breakfast]BBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:682BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:682BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [a_food_lunch]BBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:682BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:683BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> SELECT pkey,action_name FROM a_food_breakfast LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:683BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [food_breakfast]BBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:683BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:684BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [a_food_dinner]BBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:684BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:684BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> SELECT pkey,action_name FROM a_food_lunch LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:685BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [food_lunch]BBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:685BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:685BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [a_cycles]BBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:685BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:686BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> SELECT pkey,action_name FROM a_cycles LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:686BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [cycles]BBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:686BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:686BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [a_cycle_routine]BBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:687BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:687BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> SELECT pkey,action_name FROM a_cycle_routine LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:687BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [cycle_routine]BBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:687BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:688BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [a_batch]BBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:688BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:688BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> SELECT pkey,action_name FROM a_batch LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:688BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [batch]BBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:689BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:689BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [a_product]BBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:689BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:689BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [a_employee]BBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:689BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:690BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> SELECT pkey,action_name FROM a_product LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:690BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [product]BBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:690BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:690BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [a_mach_group]BBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:691BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:691BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [a_empl_group]BBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:691BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:691BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [a_linkeddoc]BBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:691BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:692BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> SELECT pkey,action_name FROM a_mach_group LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:692BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [mach_group]BBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:692BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:692BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [a_planning]BBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:692BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:693BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> SELECT pkey,action_name FROM a_employee LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:693BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [employee]BBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:693BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:694BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> SELECT pkey,action_name FROM a_shift LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:694BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [shift]BBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:694BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:695BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> SELECT pkey,action_name FROM a_planning LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:695BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [planning]BBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:695BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:695BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [a_shift]BBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:695BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:696BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> SELECT pkey,action_name FROM a_operation LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:696BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [operation]BBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:696BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:696BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [a_operation]BBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:696BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:697BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> SELECT pkey,action_name FROM a_empl_group LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:697BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [empl_group]BBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:697BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:697BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [a_object_to_locate]BBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:697BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:698BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> SELECT pkey,action_name FROM a_living_obj_location LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:698BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [living_obj_location]BBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:698BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:699BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> SELECT pkey,action_name FROM a_linkeddoc LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:699BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [linkeddoc]BBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:699BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:699BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [a_workstep]BBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:699BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:699BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [a_errors_living_obj_location]BBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:700BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:700BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> SELECT pkey,action_name FROM a_living_obj_mach LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:700BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [living_obj_mach]BBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:701BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:701BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [a_errors_living_obj_mach]BBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:701BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:701BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> SELECT pkey,action_name FROM a_workstep LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:701BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [workstep]BBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:702BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:702BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [a_living_obj_mach]BBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:702BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:702BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> SELECT pkey,action_name FROM a_errors_living_obj_mach LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:702BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [errors_living_obj_mach]BBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:703BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:703BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [a_living_obj_location]BBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:703BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:703BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> SELECT pkey,action_name FROM a_errors_living_obj_location LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:703BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [errors_living_obj_location]BBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:704BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:704BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> SELECT pkey,action_name FROM a_object_to_locate LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:704BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [object_to_locate]BBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:704BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:705BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [a_rti_add_customer]BBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:705BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:705BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> SELECT pkey,action_name FROM a_rti_add_customer LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:705BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [rti_add_customer]BBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:705BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:705BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [a_rti_add_phone]BBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:706BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:706BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> SELECT pkey,action_name FROM a_rti_add_phone LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:706BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [rti_add_phone]BBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:706BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:706BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [a_rti_add_chef]BBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:707BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:707BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> SELECT pkey,action_name FROM a_rti_add_chef LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 13:34:58:707BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [rti_add_chef]BBEEBBEE
+BBEEBBEE23.02.2026 13:35:00:173BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::slotTreeClassItemPressed -> SELECT pkey,name FROM object_to_locate LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 13:35:01:270BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::slotNewElement()-> Table name=object_to_locateBBEEBBEE
+BBEEBBEE23.02.2026 13:35:01:272BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::slotNewElement()-> Amount of properties=11BBEEBBEE
+BBEEBBEE23.02.2026 13:35:01:273BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::slotNewElement()-> Propertie name [pkey]BBEEBBEE
+BBEEBBEE23.02.2026 13:35:01:274BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::slotNewElement()-> Propertie name [name]BBEEBBEE
+BBEEBBEE23.02.2026 13:35:01:275BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::slotNewElement()-> Propertie name [created_on]BBEEBBEE
+BBEEBBEE23.02.2026 13:35:01:275BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::slotNewElement()-> Propertie name [object_to_locate_kind]BBEEBBEE
+BBEEBBEE23.02.2026 13:35:01:276BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::slotNewElement()-> Propertie name [obj_location_id]BBEEBBEE
+BBEEBBEE23.02.2026 13:35:01:277BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::slotNewElement()-> Propertie name [qr_bar_code]BBEEBBEE
+BBEEBBEE23.02.2026 13:35:01:277BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::slotNewElement()-> Propertie name [ssid]BBEEBBEE
+BBEEBBEE23.02.2026 13:35:01:278BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::slotNewElement()-> Propertie name [included_object]BBEEBBEE
+BBEEBBEE23.02.2026 13:35:01:278BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::slotNewElement()-> Propertie name [coord_x]BBEEBBEE
+BBEEBBEE23.02.2026 13:35:01:279BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::slotNewElement()-> Propertie name [coord_y]BBEEBBEE
+BBEEBBEE23.02.2026 13:35:01:281BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::slotNewElement()-> Propertie name [coord_z]BBEEBBEE
+BBEEBBEE23.02.2026 13:35:07:996BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclObject::insertObject() -> ...bool clDatabasePostgres::insertIntoTable(QString paTableName,vector <QString> paColumns, vector <QString> paValues, vector <QString> paTypeValue, QString &paMessage) -> "INSERT INTO  (name,created_on,object_to_locate_kind,obj_location_id,qr_bar_code,ssid,included_object,coord_x,coord_y,coord_z) VALUES ('TEST', to_timestamp('2026-02-23 13:35:01.282', 'YYYY-MM-DD HH24:MI:SS.MS'),0,NULL,'','',NULL,0,0,0);" command failed ...BBEEBBEE
+BBEEBBEE23.02.2026 13:35:07:998BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclObject::insertObject() -> ...bool clDatabasePostgres::getFromTableByProperty(QString paTableName, QString paStartValue, QString paMaxValue,vector <QString> paProperties,vector <QString> paValue, vector <QString> paTypeValue, vector <QString> paLogExp, vector <QString> &paReturnId,QString &paMessage) -> "SELECT pkey FROM  WHERE name = 'TEST' AND created_on = timestamp '2026-02-23 13:35:01.282' AND object_to_locate_kind = 0 AND obj_location_id is NULL AND qr_bar_code = '' AND ssid = '' AND included_object is NULL AND coord_x =  AND coord_y =  AND coord_z =  LIMIT 1000 OFFSET 0;" command failed ...BBEEBBEE
+BBEEBBEE23.02.2026 13:35:07:999BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclObject::insertObject() -> problem no objects foundBBEEBBEE
+BBEEBBEE23.02.2026 13:35:07:999BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::slotNewElement() -> BBEEBBEE
+BBEEBBEE23.02.2026 13:35:10:224BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::slotTreeClassItemPressed -> SELECT pkey,name FROM object_to_locate LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 13:35:13:736BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::slotTreeClassItemPressed -> SELECT pkey,name FROM object_to_locate LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 13:50:05:036BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclLivingObject::getLivingObjectsForThisWorkstation() -> SELECT pkey FROM living_obj_mach WHERE WORKSTATION_NAME = 'zolly-deb' LIMIT ALL OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 13:50:05:037BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclWorkstationCycles::getWorkstationCycles() -> SELECT pkey FROM cycles WHERE WORKSTATION_NAME = 'zolly-deb' LIMIT ALL OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 13:50:05:037BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::initializeLibrarys -> Librarys initializedBBEEBBEE
+BBEEBBEE23.02.2026 13:50:05:038BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::readClassesFromXmlFile -> mapping file readedBBEEBBEE
+BBEEBBEE23.02.2026 13:50:05:038BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::readMethodsFromXmlFileGeneral -> mapping file readedBBEEBBEE
+BBEEBBEE23.02.2026 13:50:05:038BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::loadClasses -> ./Objects/libclOperation.soBBEEBBEE
+BBEEBBEE23.02.2026 13:50:05:039BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::callObjectDLL -> Library [./Objects/libclOperation.so] foundBBEEBBEE
+BBEEBBEE23.02.2026 13:50:05:039BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass loadedBBEEBBEE
+BBEEBBEE23.02.2026 13:50:05:039BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass after stockingBBEEBBEE
+BBEEBBEE23.02.2026 13:50:05:039BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass calledBBEEBBEE
+BBEEBBEE23.02.2026 13:50:05:039BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::loadClasses() -> Propertie name [pkey]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:05:040BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::loadClasses() -> Propertie name [name]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:05:040BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::loadClasses() -> Propertie name [created_on]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:05:040BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::loadClasses() -> Propertie name [object]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:05:040BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::loadClasses() -> Propertie name [objects]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:05:040BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::loadClasses() -> Propertie name [datum_start]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:05:040BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::loadClasses() -> Propertie name [datum_stop]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:05:040BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::loadClasses() -> Propertie name [h2o_value]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:05:040BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::loadClasses() -> Propertie name [performed_workstep]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:05:040BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::loadClasses() -> Propertie name [operation_state]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:05:040BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::loadClasses() -> Propertie name [operation_source]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:05:040BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::loadClasses() -> Propertie name [operation_closed_cause]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:05:040BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::loadClasses() -> Propertie name [operation_error_information]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:05:040BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::loadClasses -> ./Objects/libclErrorTable.soBBEEBBEE
+BBEEBBEE23.02.2026 13:50:05:041BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::callObjectDLL -> Library [./Objects/libclErrorTable.so] foundBBEEBBEE
+BBEEBBEE23.02.2026 13:50:05:041BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass loadedBBEEBBEE
+BBEEBBEE23.02.2026 13:50:05:041BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass after stockingBBEEBBEE
+BBEEBBEE23.02.2026 13:50:05:041BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass calledBBEEBBEE
+BBEEBBEE23.02.2026 13:50:05:042BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::callObjectDLL -> Library [./Methods/libclCreateOperationForMachine.so] foundBBEEBBEE
+BBEEBBEE23.02.2026 13:50:05:042BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass loadedBBEEBBEE
+BBEEBBEE23.02.2026 13:50:05:042BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass after stockingBBEEBBEE
+BBEEBBEE23.02.2026 13:50:05:042BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass calledBBEEBBEE
+BBEEBBEE23.02.2026 13:50:05:043BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::callObjectDLL -> Library [./Methods/libclExportToExcel.so] foundBBEEBBEE
+BBEEBBEE23.02.2026 13:50:05:043BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass loadedBBEEBBEE
+BBEEBBEE23.02.2026 13:50:05:043BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass after stockingBBEEBBEE
+BBEEBBEE23.02.2026 13:50:05:044BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass calledBBEEBBEE
+BBEEBBEE23.02.2026 13:50:05:044BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::callObjectDLL -> Library [./Methods/libclContinueForMachine.so] foundBBEEBBEE
+BBEEBBEE23.02.2026 13:50:05:044BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass loadedBBEEBBEE
+BBEEBBEE23.02.2026 13:50:05:045BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass after stockingBBEEBBEE
+BBEEBBEE23.02.2026 13:50:05:045BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass calledBBEEBBEE
+BBEEBBEE23.02.2026 13:50:05:046BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::callObjectDLL -> Library [./Methods/libclPauseForMachine.so] foundBBEEBBEE
+BBEEBBEE23.02.2026 13:50:05:046BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass loadedBBEEBBEE
+BBEEBBEE23.02.2026 13:50:05:046BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass after stockingBBEEBBEE
+BBEEBBEE23.02.2026 13:50:05:046BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass calledBBEEBBEE
+BBEEBBEE23.02.2026 13:50:05:047BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::callObjectDLL -> Library [./Methods/libclRunForMachine.so] foundBBEEBBEE
+BBEEBBEE23.02.2026 13:50:05:048BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass loadedBBEEBBEE
+BBEEBBEE23.02.2026 13:50:05:048BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass after stockingBBEEBBEE
+BBEEBBEE23.02.2026 13:50:05:048BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass calledBBEEBBEE
+BBEEBBEE23.02.2026 13:50:05:048BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::callObjectDLL -> Library [./Methods/libclOpenLinkedDoc.so] not foundBBEEBBEE
+BBEEBBEE23.02.2026 13:50:05:048BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::callObjectDLL -> Library [./Methods/libclSaveLinkedDoc.so] not foundBBEEBBEE
+BBEEBBEE23.02.2026 13:50:05:050BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::callObjectDLL -> Library [./Methods/libclCreateQrCodeOfObject.so] foundBBEEBBEE
+BBEEBBEE23.02.2026 13:50:05:050BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass loadedBBEEBBEE
+BBEEBBEE23.02.2026 13:50:05:051BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass after stockingBBEEBBEE
+BBEEBBEE23.02.2026 13:50:05:051BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass calledBBEEBBEE
+BBEEBBEE23.02.2026 13:50:05:053BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclClassLoader::callObjectDLL -> Library [./Methods/libclShowQrCodeOfObject.so] foundBBEEBBEE
+BBEEBBEE23.02.2026 13:50:05:053BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass loadedBBEEBBEE
+BBEEBBEE23.02.2026 13:50:05:054BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass after stockingBBEEBBEE
+BBEEBBEE23.02.2026 13:50:05:054BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEcreatePluginClass calledBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:942BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::slotButtonRefreshPressed()SELECT * FROM pg_tables WHERE schemaname='public'; -> OKBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:943BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::slotButtonRefreshPressed()TABLE:[a_customer][a_allergy][a_food_texture][customer][a_customer_remark][allergy][a_does_not_like][customer_remark][a_diet][food_texture][diet][does_not_like][a_food_portion][food_portion][a_paper][a_food_place][paper][food_place][a_food_bread][food_bread][a_food_butter][a_food_charcuterie][food_butter][a_food_drink][food_drink][a_food_drinkserivce][a_food_sugar][food_drinkserivce][food_charcuterie][food_sugar][a_food_dessert][food_dinner][food_dessert][a_food_breakfast][a_food_lunch][food_breakfast][a_food_dinner][food_lunch][a_cycles][cycles][a_cycle_routine][cycle_routine][a_batch][batch][a_product][a_employee][product][a_mach_group][a_empl_group][a_linkeddoc][mach_group][a_planning][employee][shift][planning][a_shift][operation][a_operation][empl_group][a_object_to_locate][living_obj_location][linkeddoc][a_workstep][a_errors_living_obj_location][living_obj_mach][a_errors_living_obj_mach][workstep][a_living_obj_mach][errors_living_obj_mach][a_living_obj_location][errors_living_obj_location][object_to_locate][a_rti_add_customer][rti_add_customer][a_rti_add_phone][rti_add_phone][a_rti_add_chef][rti_add_chef]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:943BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:944BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [a_customer]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:944BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:944BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [a_allergy]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:944BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:945BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [a_food_texture]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:945BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:946BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> SELECT pkey,action_name FROM a_customer LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:946BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [customer]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:946BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:946BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [a_customer_remark]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:947BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:947BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> SELECT pkey,action_name FROM a_allergy LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:947BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [allergy]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:947BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:948BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [a_does_not_like]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:948BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:948BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> SELECT pkey,action_name FROM a_customer_remark LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:948BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [customer_remark]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:949BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:949BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [a_diet]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:949BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:949BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> SELECT pkey,action_name FROM a_food_texture LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:949BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [food_texture]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:949BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:950BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> SELECT pkey,action_name FROM a_diet LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:950BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [diet]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:950BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:950BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> SELECT pkey,action_name FROM a_does_not_like LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:950BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [does_not_like]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:951BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:951BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [a_food_portion]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:951BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:951BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> SELECT pkey,action_name FROM a_food_portion LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:951BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [food_portion]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:951BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:951BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [a_paper]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:952BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:952BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [a_food_place]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:952BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:952BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> SELECT pkey,action_name FROM a_paper LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:952BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [paper]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:952BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:953BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> SELECT pkey,action_name FROM a_food_place LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:953BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [food_place]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:953BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:953BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [a_food_bread]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:953BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:953BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> SELECT pkey,action_name FROM a_food_bread LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:953BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [food_bread]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:953BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:953BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [a_food_butter]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:954BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:954BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [a_food_charcuterie]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:954BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:954BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> SELECT pkey,action_name FROM a_food_butter LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:954BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [food_butter]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:954BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:954BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [a_food_drink]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:954BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:954BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> SELECT pkey,action_name FROM a_food_drink LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:955BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [food_drink]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:955BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:955BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [a_food_drinkserivce]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:955BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:955BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [a_food_sugar]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:955BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:955BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> SELECT pkey,action_name FROM a_food_drinkserivce LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:955BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [food_drinkserivce]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:955BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:956BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> SELECT pkey,action_name FROM a_food_charcuterie LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:956BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [food_charcuterie]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:956BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:956BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> SELECT pkey,action_name FROM a_food_sugar LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:956BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [food_sugar]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:956BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:956BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [a_food_dessert]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:956BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:956BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> SELECT pkey,action_name FROM a_food_dinner LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:957BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [food_dinner]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:957BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:957BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> SELECT pkey,action_name FROM a_food_dessert LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:957BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [food_dessert]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:957BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:957BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [a_food_breakfast]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:957BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:957BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [a_food_lunch]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:957BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:957BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> SELECT pkey,action_name FROM a_food_breakfast LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:958BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [food_breakfast]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:958BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:958BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [a_food_dinner]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:958BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:958BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> SELECT pkey,action_name FROM a_food_lunch LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:958BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [food_lunch]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:958BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:958BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [a_cycles]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:958BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:958BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> SELECT pkey,action_name FROM a_cycles LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:959BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [cycles]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:959BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:959BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [a_cycle_routine]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:959BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:959BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> SELECT pkey,action_name FROM a_cycle_routine LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:959BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [cycle_routine]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:959BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:959BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [a_batch]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:959BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:959BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> SELECT pkey,action_name FROM a_batch LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:959BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [batch]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:960BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:960BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [a_product]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:960BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:960BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [a_employee]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:960BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:960BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> SELECT pkey,action_name FROM a_product LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:960BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [product]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:960BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:960BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [a_mach_group]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:960BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:960BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [a_empl_group]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:960BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:960BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [a_linkeddoc]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:961BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:961BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> SELECT pkey,action_name FROM a_mach_group LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:961BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [mach_group]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:961BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:961BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [a_planning]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:961BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:961BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> SELECT pkey,action_name FROM a_employee LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:961BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [employee]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:961BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:961BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> SELECT pkey,action_name FROM a_shift LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:962BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [shift]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:962BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:962BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> SELECT pkey,action_name FROM a_planning LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:962BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [planning]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:962BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:962BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [a_shift]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:962BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:962BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> SELECT pkey,action_name FROM a_operation LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:962BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [operation]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:962BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:962BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [a_operation]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:963BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:963BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> SELECT pkey,action_name FROM a_empl_group LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:963BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [empl_group]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:963BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:963BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [a_object_to_locate]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:963BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:963BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> SELECT pkey,action_name FROM a_living_obj_location LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:963BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [living_obj_location]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:963BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:964BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> SELECT pkey,action_name FROM a_linkeddoc LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:964BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [linkeddoc]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:964BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:964BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [a_workstep]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:964BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:964BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [a_errors_living_obj_location]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:964BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:964BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> SELECT pkey,action_name FROM a_living_obj_mach LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:964BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [living_obj_mach]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:964BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:964BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [a_errors_living_obj_mach]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:964BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:965BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> SELECT pkey,action_name FROM a_workstep LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:965BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [workstep]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:965BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:965BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [a_living_obj_mach]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:965BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:965BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> SELECT pkey,action_name FROM a_errors_living_obj_mach LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:965BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [errors_living_obj_mach]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:965BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:965BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [a_living_obj_location]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:965BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:966BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> SELECT pkey,action_name FROM a_errors_living_obj_location LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:966BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [errors_living_obj_location]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:966BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:966BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> SELECT pkey,action_name FROM a_object_to_locate LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:966BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [object_to_locate]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:966BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:966BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [a_rti_add_customer]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:966BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:966BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> SELECT pkey,action_name FROM a_rti_add_customer LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:966BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [rti_add_customer]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:966BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:967BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [a_rti_add_phone]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:967BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:967BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> SELECT pkey,action_name FROM a_rti_add_phone LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:967BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [rti_add_phone]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:967BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:967BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [a_rti_add_chef]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:967BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> clServer_impl::getAllPropertiesFromTable -> succesBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:967BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> SELECT pkey,action_name FROM a_rti_add_chef LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 13:50:10:967BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::createClassesInTreeView -> Added table [rti_add_chef]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:13:199BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::slotTreeClassItemPressed -> SELECT pkey,name FROM object_to_locate LIMIT 1000 OFFSET 0;->OKBBEEBBEE
+BBEEBBEE23.02.2026 13:50:14:103BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::slotNewElement()-> Table name=object_to_locateBBEEBBEE
+BBEEBBEE23.02.2026 13:50:14:104BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::slotNewElement()-> Amount of properties=11BBEEBBEE
+BBEEBBEE23.02.2026 13:50:14:104BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::slotNewElement()-> Propertie name [pkey]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:14:104BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::slotNewElement()-> Propertie name [name]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:14:104BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::slotNewElement()-> Propertie name [created_on]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:14:104BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::slotNewElement()-> Propertie name [object_to_locate_kind]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:14:105BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::slotNewElement()-> Propertie name [obj_location_id]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:14:105BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::slotNewElement()-> Propertie name [qr_bar_code]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:14:105BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::slotNewElement()-> Propertie name [ssid]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:14:105BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::slotNewElement()-> Propertie name [included_object]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:14:105BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::slotNewElement()-> Propertie name [coord_x]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:14:105BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::slotNewElement()-> Propertie name [coord_y]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:14:105BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::slotNewElement()-> Propertie name [coord_z]BBEEBBEE
+BBEEBBEE23.02.2026 13:50:20:724BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclObject::insertObject() -> ...INSERT INTO OBJECT_TO_LOCATE (name,created_on,object_to_locate_kind,obj_location_id,qr_bar_code,ssid,included_object,coord_x,coord_y,coord_z) VALUES ('test', to_timestamp('2026-02-23 13:50:14.105', 'YYYY-MM-DD HH24:MI:SS.MS'),0,NULL,'','',NULL,0,0,0);-> OKBBEEBBEE
+BBEEBBEE23.02.2026 13:50:20:724BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclObject::insertObject() -> ...bool clDatabasePostgres::getFromTableByProperty(QString paTableName, QString paStartValue, QString paMaxValue,vector <QString> paProperties,vector <QString> paValue, vector <QString> paTypeValue, vector <QString> paLogExp, vector <QString> &paReturnId,QString &paMessage) -> "SELECT pkey FROM OBJECT_TO_LOCATE WHERE name = 'test' AND created_on = timestamp '2026-02-23 13:50:14.105' AND object_to_locate_kind = 0 AND obj_location_id is NULL AND qr_bar_code = '' AND ssid = '' AND included_object is NULL AND coord_x =  AND coord_y =  AND coord_z =  LIMIT 1000 OFFSET 0;" command failed ...BBEEBBEE
+BBEEBBEE23.02.2026 13:50:20:725BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclObject::insertObject() -> problem no objects foundBBEEBBEE
+BBEEBBEE23.02.2026 13:50:20:725BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::slotNewElement() -> BBEEBBEE
+BBEEBBEE23.02.2026 13:50:24:011BBEE10BBEEzolly-debBBEE2UVServerTest.exeBBEEclParameterView::slotTreeClassItemPressed -> SELECT pkey,name FROM object_to_locate LIMIT 1000 OFFSET 0;->OKBBEEBBEE
