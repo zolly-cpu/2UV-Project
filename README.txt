@@ -29,7 +29,7 @@ The startup arguments for the applications you can find in the AppStarter.xml
 
 In the ObjectViewer
 - Planning nog finisched yet
-- Location tracking objects must be created in the ServerTest
+- Location tracking was working on windows needs some rework
 
 SocketBox
 - Open for imlplementing dll's with the protocoll for communication
