@@ -1,10 +1,14 @@
 Compile with the following:
 ---------------------------
 zeroc
+- sudo apt install zeroc*
+- sudo apt install libzeroc*
 postgresql
+- sudo apt install postgres*
 qt5
+- sudo apt install libqt5*
 scons
-python3
+- python3 -m pip install scons==4.2.0
 ---------------------------
 sudo apt install pip
 mv /usr/lib/python3.13/EXTERNALLY-MANAGED /home/zolly/Documents
