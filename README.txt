@@ -34,3 +34,7 @@ In the ObjectViewer
 
 SocketBox
 - Open for imlplementing dll's with the protocoll for communication
+
+Methods
+- Create Objects and Methods as wanted to your need
+- Don't forget to copy the methods and objects to the runtime folder in the directory of the ObjectViewer from the ServerTest
