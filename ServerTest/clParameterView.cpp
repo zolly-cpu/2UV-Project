@@ -28,8 +28,8 @@ clParameterView::clParameterView(clIceClientServer * paIceClientServer, clIceCli
 	
 
 	
-	meGraphWidget = new GraphWidget;
-	meParameterView.horizontalLayout->addWidget(meGraphWidget);
+	//meGraphWidget = new GraphWidget;
+	//meParameterView.horizontalLayout->addWidget(meGraphWidget);
 	
 }
 
