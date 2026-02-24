@@ -4,6 +4,7 @@ zeroc
 postgresql
 qt5
 scons
+python3
 ---------------------------
 sudo apt install pip
 mv /usr/lib/python3.13/EXTERNALLY-MANAGED /home/zolly/Documents
