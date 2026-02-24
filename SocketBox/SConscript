@@ -1,0 +1,77 @@
+Import ('env')
+myenv = env
+
+
+InstallDir = myenv['BINDIR_SocketBox']
+
+################################ INSTALL THE LOG SERVER ###################################
+
+
+#SourcesDll = ['clDriverFrame.cpp',
+#                'clDriverFrameImplementation.cpp'
+#                ]
+#SocketBoxDll = myenv.SharedLibrary('SocketBoxContent', SourcesDll,
+#                    LIBS=['C:/Qt/Qt5.12.12/5.12.12/msvc2017_64/lib/Qt5Core'
+#                  	]
+#                )                    
+#myenv.Install (InstallDir, 'SocketBoxContent.dll')
+
+
+#SourcesQtTest = ['clDriverFrame.cpp',
+#                'clDriverFrameImplementation.cpp'
+#                ]
+#SocketBoxLib = myenv.Library('SocketBoxLib', SourcesQtTest)                          
+#myenv.Install (InstallDir, SocketBoxLib)
+
+
+
+################################### INSTALL THE SOCKETBOX ###################################
+SourceSocketBox = [	'clMain.cpp',
+             myenv.Moc('clSocketBox.h'),
+             myenv.Moc('clSocketBoxThread.h'),
+			 'clSocketBox.cpp',
+             'clSocketBoxThread.cpp'
+			]
+			
+SocketBox = myenv.Program('clSocketBox',SourceSocketBox,
+                  LIBS=['libQt5Widgets',
+                    'libQt5Core',
+                    'libQt5Xml',
+                    'libQt5Network'
+                  	])
+#'C:/TEMP/2UV_Framework/TESTPROJECT/#SocketBox/SocketBoxContent'                        
+myenv.Install (InstallDir, SocketBox)
+
+################################### INSTALL THE SOCKETBOXCLIENT ###################################
+SourceSocketBoxClient = ['clClient.cpp',
+                    myenv.Moc('clSocketBoxClient.h'),
+                    'clSocketBoxClient.cpp'
+                    ]
+SocketBoxClient = myenv.Program('clSocketBoxClient',SourceSocketBoxClient,
+                  LIBS=['libQt5Widgets',
+                    'libQt5Core',
+                    'libQt5Xml',
+                    'libQt5Network'
+                  	])
+myenv.Install (InstallDir, SocketBoxClient)
+
+
+
+################################### INSTALL THE SOCKETBOXCLIENTUI ###################################
+SourceSocketBoxClientUi = [	'Client.cpp',
+	  		myenv.Moc('clClientApplication.h'),
+			 'clClientApplication.cpp',
+			 myenv.QT4UI('wdClientSocketBoxUi.ui')[1:]
+			]
+			
+SocketBoxClientUi = myenv.Program('SocketBoxClientUi',SourceSocketBoxClientUi,
+                  LIBS=['libQt5Widgets',
+                    'libQt5Core',
+                    'libQt5Xml',
+                    'libQt5Network'                    
+                    ])
+                        
+myenv.Install (InstallDir, SocketBoxClientUi)
+
+
+
