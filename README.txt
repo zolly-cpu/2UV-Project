@@ -1,5 +1,6 @@
 Compile with the following:
 ---------------------------
+python3.13
 zeroc
 - sudo apt install zeroc*
 - sudo apt install libzeroc*
