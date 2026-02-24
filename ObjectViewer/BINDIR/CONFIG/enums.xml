@@ -1,0 +1,222 @@
+<enums>
+	<enum name="OBJECT_TO_LOCATE_KIND">
+		<state value="0" text="Nothing"/>
+		<state value="10" text="Magazine type A"/>
+		<state value="20" text="Magazine type B"/>
+		<state value="30" text="Magazine type C"/>
+		<state value="40" text="Magazine type D"/>
+		<state value="50" text="Magazine type E"/>
+		<state value="60" text="Magazine type F"/>
+		<state value="70" text="Magazine type G"/>
+		<state value="80" text="Magazine type H"/>
+		<state value="90" text="Magazine type I"/>
+		<state value="100" text="Employee"/>
+	</enum>
+	
+	<enum name="CONNECTION_STATE">
+		<state value="0" text="not connected"/>
+		<state value="1" text="connected"/>
+	</enum>
+	<enum name="DEVICE_STATE">
+		<state value="0" text="nothing"/>
+		<state value="10" text="waiting"/>
+		<state value="20" text="running"/>
+		<state value="30" text="paused"/>
+		<state value="40" text="not connected"/>
+		<state value="100" text="undefined"/>
+		<state value="110" text="error"/>
+	</enum>	
+	<enum name="DEVICE_FILETRANSFER">
+		<state value="0" text="no file transfer"/>
+		<state value="10" text="file transfer on going"/>
+	</enum>
+	<enum name="CALL_METHOD_ON_ERROR">
+		<state value="0" text="no"/>
+		<state value="1" text="yes"/>
+	</enum>	
+	<enum name="OPERATION_STATE">
+		<state value="0" text="Nothing"/>
+		<state value="10" text="Open"/>
+		<state value="20" text="Closed"/>
+	</enum>		
+	<enum name="OPERATION_CLOSED_CAUSE">
+		<state value="0" text="Nothing"/>
+		<state value="10" text="Normal"/>
+		<state value="20" text="Error"/>
+	</enum>			
+	<enum name="OPERATION_SOURCE">
+		<state value="0" text="Nothing"/>
+		<state value="10" text="Cycle"/>
+		<state value="20" text="Routine"/>
+		<state value="30" text="Script"/>
+		<state value="40" text="System"/>
+		<state value="50" text="Browser"/>
+	</enum>		
+	<enum name="LEVEL">
+		<state value="0" text="Nothing"/>
+		<state value="10" text="Board"/>
+		<state value="20" text="Administration"/>
+		<state value="30" text="Worker"/>
+		<state value="40" text="R&amp;D"/>
+		<state value="50" text="Production"/>
+	</enum>		
+	<enum name="WS_TECH">
+		<state value="0" text="Nothing"/>
+		<state value="10" text="Cleaning Hall"/>
+		<state value="20" text="Cleaning Room"/>
+		<state value="21" text="Cleaning Floor 1"/>
+		<state value="22" text="Cleaning Floor 2"/>
+		<state value="23" text="Cleaning Floor 3"/>
+		<state value="24" text="Cleaning Floor 4"/>
+		<state value="25" text="Cleaning Floor 5"/>
+		<state value="26" text="Cleaning Floor 6"/>
+		<state value="27" text="Cleaning Floor 7"/>
+		<state value="28" text="Cleaning Floor 8"/>
+		<state value="29" text="Cleaning Floor 9"/>
+		<state value="30" text="Cleaning Floor 10"/>
+		<state value="100" text="Making bed"/>
+		<state value="200" text="Administration"/>
+		<state value="300" text="Research"/>
+		<state value="500" text="Cooking breakfast"/>
+		<state value="510" text="Cooking lunch"/>
+		<state value="520" text="Cooking dinner"/>
+	</enum>	
+	<enum name="WS_STATE">
+		<state value="0" text="Nothing"/>
+		<state value="10" text="Started"/>
+		<state value="20" text="Done"/>
+		<state value="30" text="Paused"/>
+	</enum>	
+	<enum name="WS_INCLUDE_PLANNING">
+		<state value="0" text="nee"/>
+		<state value="1" text="ja"/>
+	</enum>	
+	<enum name="PRODUCT_WS_STATE">
+		<state value="0" text="Nothing"/>
+		<state value="10" text="Started"/>
+		<state value="20" text="Done"/>
+		<state value="30" text="Finished"/>
+	</enum>	
+	<enum name="PRODUCT_STATE">
+		<state value="0" text="Nothing"/>
+		<state value="10" text="Free"/>
+		<state value="20" text="Locked"/>
+	</enum>	
+	<enum name="CUSTOMER_INSULINE_MORNING">
+		<state value="0" text="nee"/>
+		<state value="1" text="ja"/>
+	</enum>	
+	<enum name="CUSTOMER_INSULINE_NOON">
+		<state value="0" text="nee"/>
+		<state value="1" text="ja"/>
+	</enum>	
+	<enum name="CUSTOMER_INSULINE_EVENING">
+		<state value="0" text="nee"/>
+		<state value="1" text="ja"/>
+	</enum>	
+	<enum name="CUSTOMER_HELP_FEEDING">
+		<state value="0" text="nee"/>
+		<state value="1" text="deels"/>
+		<state value="2" text="volledig"/>
+	</enum>	
+	<enum name="CUSTOMER_SWALLOW_PROB">
+		<state value="0" text="nee"/>
+		<state value="1" text="toezicht"/>
+		<state value="2" text="probleem"/>
+	</enum>	
+	<enum name="BREAKFAST_PERPARED">
+		<state value="0" text="nee"/>
+		<state value="1" text="ja"/>
+	</enum>	
+	<enum name="BREAKFAST_SMEAR">
+		<state value="0" text="nee"/>
+		<state value="1" text="ja"/>
+	</enum>	
+	<enum name="BREAKFAST_CRUSTS">
+		<state value="0" text="nee"/>
+		<state value="1" text="ja"/>
+	</enum>	
+	<enum name="BREAKFAST_NAPKIN">
+		<state value="0" text="nee"/>
+		<state value="1" text="ja"/>
+	</enum>	
+	<enum name="DINNER_PERPARED">
+		<state value="0" text="nee"/>
+		<state value="1" text="ja"/>
+	</enum>	
+	<enum name="DINNER_SMEAR">
+		<state value="0" text="nee"/>
+		<state value="1" text="ja"/>
+	</enum>	
+	<enum name="DINNER_CRUSTS">
+		<state value="0" text="nee"/>
+		<state value="1" text="ja"/>
+	</enum>	
+	<enum name="DINNER_NAPKIN">
+		<state value="0" text="nee"/>
+		<state value="1" text="ja"/>
+	</enum>	
+	<enum name="LUNCH_PERPARED">
+		<state value="0" text="nee"/>
+		<state value="1" text="ja"/>
+	</enum>		
+	<enum name="LUNCH_NAPKIN">
+		<state value="0" text="nee"/>
+		<state value="1" text="ja"/>
+	</enum>	
+	<enum name="LUNCH_PLATE">
+		<state value="0" text="normaal"/>
+		<state value="1" text="diep"/>
+	</enum>		
+	<enum name="CHARCUTERIE_AVAILABLE_BR">
+		<state value="0" text="nee"/>
+		<state value="1" text="ja"/>
+	</enum>		
+	<enum name="CHARCUTERIE_AVAILABLE_DI">
+		<state value="0" text="nee"/>
+		<state value="1" text="ja"/>
+	</enum>			
+	<enum name="STANDARD_SMEAR">
+		<state value="0" text="nee"/>
+		<state value="1" text="ja"/>
+	</enum>		
+	<enum name="STANDARD_CRUSTS">
+		<state value="0" text="nee"/>
+		<state value="1" text="ja"/>
+	</enum>		
+	<enum name="STANDARD_NAPKIN">
+		<state value="0" text="nee"/>
+		<state value="1" text="ja"/>
+	</enum>	
+	<enum name="CUSTOMER_LOCATION_GROUP">
+		<state value="0" text="gvl"/>
+		<state value="1" text="buiten"/>
+		<state value="2" text="1ste verdiep"/>
+		<state value="3" text="cottage"/>
+		<state value="4" text="2de verdiep"/>
+	</enum>		
+	<enum name="BREAKFAST_LOCATION_GROUP">
+		<state value="0" text="gvl"/>
+		<state value="1" text="buiten"/>
+		<state value="2" text="1ste verdiep"/>
+		<state value="3" text="cottage"/>
+		<state value="4" text="2de verdiep"/>
+	</enum>	
+	<enum name="DINNER_LOCATION_GROUP">
+		<state value="0" text="gvl"/>
+		<state value="1" text="buiten"/>
+		<state value="2" text="1ste verdiep"/>
+		<state value="3" text="cottage"/>
+		<state value="4" text="2de verdiep"/>
+	</enum>
+	<enum name="CUSTOMER_ON_ROOM">
+		<state value="0" text="nee"/>
+		<state value="1" text="ja"/>
+	</enum>	
+
+
+
+
+
+	
+</enums>

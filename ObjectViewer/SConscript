@@ -1,0 +1,73 @@
+Import ('env')
+myenv = env
+
+InstallDir = myenv['BINDIR_ObjectViewer']
+
+################################ ObjectViewer ###################################
+
+SourcesObjectViewer = [ 'clMain.cpp',
+                  myenv.Moc('clMainWindow.h'),
+                  myenv.Moc('clObjectViewer.h'),
+                  myenv.Moc('clProductPlanner.h'),
+                  myenv.Moc('clClassObjectTreeItem.h'),
+                  myenv.Moc('clClassInfo.h'),
+                  myenv.Moc('clClassLoader.h'),
+                  myenv.Moc('clNewObjectUI.h'),
+                  myenv.Moc('clEditObjectUI.h'),  
+                  myenv.Moc('clListWidgetExtendForObject.h'),                  
+                  myenv.Moc('clListWidgetSelectObject.h'),
+                  myenv.Moc('clWidgetExtendForObject.h'), 
+                  myenv.Moc('clListWidgetExtendForString.h'),
+                  myenv.Moc('clChangePropertieText.h'),
+                  myenv.Moc('clChangePropertieTextArray.h'),
+                  myenv.Moc('clObjectListItem.h'),                  
+                  myenv.Moc('clComboBoxExtend.h'),
+                  myenv.Moc('clObjectLocator.h'),                  
+                  myenv.QT4UI('wdObjectView.ui')[1:],
+                  myenv.QT4UI('wdProductPlanner.ui')[1:],
+                  myenv.QT4UI('wdChangePropertieText.ui')[1:],                  
+                  myenv.QT4UI('wdObjectLocator.ui')[1:],                  
+                  'clMainWindow.cpp',
+                  'clObjectViewer.cpp',
+                  'clIceClientLogging.cpp',
+                  'clIceClientServer.cpp',
+                  'ICE_LogApplication.cpp',
+                  'ICE_ServerApplication.cpp',
+                  'clClassObjectTreeItem.cpp',
+                  'clDatabaseColumn.cpp',
+                  'clDatabaseAction.cpp',
+                  'clClassInfo.cpp',
+                  'clClassLoader.cpp',
+                  'clNewObjectUI.cpp',
+                  'clEditObjectUI.cpp',
+                  'clListWidgetExtendForObject.cpp',
+                  'clListWidgetSelectObject.cpp',
+                  'clWidgetExtendForObject.cpp', 
+                  'clListWidgetExtendForString.cpp', 
+                  'clChangePropertieText.cpp',
+                  'clChangePropertieTextArray.cpp',
+                  'clComboBoxExtend.cpp',
+                  'clObjectListItem.cpp',                  
+                  'clObject.cpp',
+                  'clProductPlanner.cpp',
+                  'clObjectLocator.cpp'
+                 ]
+                 #
+ObjectViewerProg = myenv.Program('2UVObjectViewer', SourcesObjectViewer, 
+                  LIBS=['libQt5Widgets',
+                    'libQt5Core',
+                    'libQt53DExtras',
+                    'libQt53DRender',
+                    'libQt53DCore',
+                    'libQt5Gui',
+                    'libQt5Xml',
+                    'libQt5Charts',
+                    'libQt5Network',
+					'libpq',
+                    'libIce',
+                    'libIceDiscovery',
+                    'libIceLocatorDiscovery',
+                    'libIceSSL',
+                    'libpython3.13'
+                        ])
+myenv.Install (InstallDir, ObjectViewerProg)

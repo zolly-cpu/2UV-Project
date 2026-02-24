@@ -1,0 +1,23 @@
+<root>
+	<class name="EMPLOYEE">
+		<methods>
+			<method name="showQrCodeOfObject"/>
+		</methods>
+		<props>
+			<prop name="EMAIL" />
+			<prop name="PASSWORD" />
+			<prop name="SURE_NAME" />
+			<prop name="EMPLOYEE_GROUPS" />
+		</props>
+	</class>
+	<class name="EMPL_GROUP">
+		<methods>
+		</methods>
+		<props>
+			<prop name="NAME" />
+			<prop name="DESCRIPTION" />			
+			<prop name="LEVEL" />
+			<prop name="CREATED_ON" />
+		</props>
+	</class>
+</root>
