@@ -80,8 +80,7 @@ def IceBuilderPython(env):
             os.system (env["ICE"] + "/slice2cpp --output-dir " + env['InstallPath'] + x[0] +  " " + env['InstallPath'] + x[0] + "/" + x[1])
 
 if env['PLATFORM'] == 'win32':
-    env.Append (CCFLAGS='-W3 -MD -O2 -EHsc -GR -DQT_THREAD_SUPPORT -DM_PI=3.14159265358979323846')
-    #env.Append (CCFLAGS='-arch:SSE2 -D_WIN32_WINNT=0x0400 -W3 -MD -O2 -G7 -GX -GR -DQT_THREAD_SUPPORT -DNO_DEBUG -DGetMessageA=GetMessage -DResetPrinterA=ResetPrinter -DM_PI=3.14159265358979323846')
+    env.Append (CCFLAGS='-W3 -MD -O2 -EHsc -GR -DQT_THREAD_SUPPORT')
 else:
     env.Append (CCFLAGS='-Wall -fPIC -DQT_THREAD_SUPPORT -D_REENTRANT')
 
