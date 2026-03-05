@@ -270,6 +270,20 @@ bool clDatabasePostgres::getFromTableDatabaseByProperty(QString paTableName, QSt
         return false;
     }
 }
+
+bool clDatabasePostgres::getFromTableDatabaseByPropertyRepresentProp(QString paTableName, QString paStartValue, QString paMaxValue,vector <QString> paProperties,vector <QString> paValue, vector <QString> paTypeValue,vector <QString> paLogExp, vector <QString> &paPropertiesReturn, vector <QString> &paValuesReturn, QString &paMessage)
+{
+    try
+    {
+        return getFromTableByPropertyRepresentProp( paTableName, paStartValue, paMaxValue, paProperties, paValue, paTypeValue, paLogExp, paPropertiesReturn, paValuesReturn, paMessage);
+    }
+    catch(...)
+    {
+        QString loTemp("bool clDatabasePostgres::getFromTableDatabaseByPropertyRepresentProp(QString paTableName, QString paStartValue, QString paMaxValue,vector <QString> paProperties,vector <QString> paValue, vector <QString> paTypeValue,vector <QString> paLogExp, vector <QString> &paPropertiesReturn, vector <QString> &paValuesReturn, QString &paMessage); -> error ...");
+        paMessage = loTemp;
+        return false;
+    }
+}
 //get by property into table database
 bool clDatabasePostgres::getFromTableDatabaseByPropertyOrdered(QString paTableName, QString paStartValue, QString paMaxValue,vector <QString> paProperties,vector <QString> paValue, vector <QString> paTypeValue,vector <QString> paLogExp, QString paOrderBy, vector <QString> &paReturnId,QString &paMessage)
 {
@@ -1824,6 +1838,124 @@ bool clDatabasePostgres::getFromTableByProperty(QString paTableName, QString paS
             return false;
     }
 }
+bool clDatabasePostgres::getFromTableByPropertyRepresentProp(QString paTableName, QString paStartValue, QString paMaxValue,vector <QString> paProperties,vector <QString> paValue, vector <QString> paTypeValue,vector <QString> paLogExp, vector <QString> &paPropertiesReturn, vector <QString> &paValuesReturn,QString &paMessage)
+{
+    try
+    {
+        if (PQstatus(meDatabaseConnection) == CONNECTION_OK)
+        {
+            // Start a transaction block
+            PGresult *loResult  = PQexec(meDatabaseConnection, "BEGIN");
+            // Check if transaction block is ok
+            if (PQresultStatus(loResult) != PGRES_COMMAND_OK)
+            {
+                PQclear(loResult);
+                PQexec(meDatabaseConnection, "END;");
+                QString loErrorMessage("bool clDatabasePostgres::getFromTableByPropertyRepresentProp(QString paTableName, QString paStartValue, QString paMaxValue,vector <QString> paProperties,vector <QString> paValue, vector <QString> paTypeValue,vector <QString> paLogExp, vector <QString> &paPropertiesReturn, vector <QString> &paValuesReturn,QString &paMessage) -> 'BEGIN' command failed ...");
+                paMessage = loErrorMessage;
+                return false;
+            }
+
+            // Clear result
+            PQclear(loResult);
+
+            QString loConditions;
+            if (!buildConditions(paProperties,paValue,paTypeValue,paLogExp,loConditions))
+            {
+
+                QString loErrorMessage("bool clDatabasePostgres::buildConditions -> Error in building conditions ...");
+                paMessage = loErrorMessage;
+                return false;
+            }
+
+
+            /*
+             *           SELECT select_list
+             *           FROM table_expression
+             *           [LIMIT { number | ALL }] [OFFSET number]
+             */
+
+            QString loQuery = QString("SELECT * FROM " + paTableName + loConditions + " LIMIT "+ ((paMaxValue.compare(QString("0")) == 0) ? QString("ALL") : QString(paMaxValue)) + " OFFSET " + QString(paStartValue) + ";");
+            QByteArray loBa = loQuery.toUtf8().constData();
+            char *loQueryToChar = loBa.data();
+            // Fetch rows from employee table
+            loResult = PQexec(meDatabaseConnection, loQueryToChar);
+
+
+            if (PQresultStatus(loResult) != PGRES_TUPLES_OK)
+            {
+                PQclear(loResult);
+                PQexec(meDatabaseConnection, "END;");
+                QString loErrorMessage("bool clDatabasePostgres::getFromTableByProperty(QString paTableName, QString paStartValue, QString paMaxValue,vector <QString> paProperties,vector <QString> paValue, vector <QString> paTypeValue, vector <QString> paLogExp, vector <QString> &paReturnId,QString &paMessage) -> \"" + loQuery + "\" command failed ...");
+                paMessage = loErrorMessage;
+                return false;
+            }
+
+
+
+            //Getting the database columns
+            vector <clDatabaseColumn> loDatabaseColumns;
+            for (int k = 0; k < meXMLDatabaseTable.size(); k++)
+            {
+                if (meXMLDatabaseTable.at(k).getTableName().toLower().compare(paTableName.toLower()) == 0)
+                {
+                    loDatabaseColumns = meXMLDatabaseTable.at(k).getDatabaseColumns();
+                    break;
+                }
+            }
+
+
+
+            int loFieldsCount = PQnfields(loResult);
+
+            for (int i = 0; i < PQntuples(loResult); i++)
+            {
+                QString loId;
+
+                //For each column
+                for (int j = 0; j < loFieldsCount; j++)
+                {
+
+                    for (int k = 0; k < loDatabaseColumns.size();k++)
+                    {
+                        if (QString(PQfname(loResult, j)).toLower().compare(QString(loDatabaseColumns.at(k).getName().toLower())) == 0)
+                        {
+                            paPropertiesReturn.push_back(QString(loDatabaseColumns.at(k).getName().toLower()));
+                            paValuesReturn.push_back(QString(PQgetvalue(loResult, i, j)));
+                        }
+
+                    }
+                }
+            }
+
+            //End the first query
+            PQexec(meDatabaseConnection, "END;");
+
+            //Clear result
+            PQclear(loResult);
+            QString loMessage(loQuery + "->OK");
+            paMessage = loMessage;
+            return true;
+        }
+        else
+        {
+            QString loTemp("bool clDatabasePostgres::getFromTableByProperty(QString paTableName, QString paStartValue, QString paMaxValue,vector <QString> paProperties,vector <QString> paValue, vector <QString> paTypeValue, vector <QString> paLogExp, vector <QString> &paReturnId,QString &paMessage) -> db was not connected ...");
+            paMessage = loTemp;
+            return false;
+        }
+        return true;
+    }
+    catch(...)
+    {
+        QString loErrorMessage("bool clDatabasePostgres::getFromTableByProperty(QString paTableName, QString paStartValue, QString paMaxValue,vector <QString> paProperties,vector <QString> paValue, vector <QString> paTypeValue, vector <QString> paLogExp, vector <QString> &paReturnId, &paMessage) -> error ...");
+        paMessage = loErrorMessage;
+        return false;
+    }
+}
+
+
+
+
 //Get data from tables trough properties ordered by
 bool clDatabasePostgres::getFromTableByPropertyOrdered(QString paTableName, QString paStartValue, QString paMaxValue,vector <QString> paProperties,vector <QString> paValue, vector <QString> paTypeValue, vector <QString> paLogExp, QString paOrderBy, vector <QString> &paReturnId,QString &paMessage)
 {

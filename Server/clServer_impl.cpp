@@ -279,6 +279,94 @@ bool clServer_impl::getFromTableDatbaseByProperty(  const std::string& paTableNa
         return false;
     }
 }
+bool clServer_impl::getFromTableDatbaseByPropertyRepresentProp(    const std::string& paTableName,
+                                                            const std::string& paStartValue,
+                                                            const std::string& paMaxValue,
+                                                            const UVServerAppServer::tyStringSequence& paProperties,
+                                                            const UVServerAppServer::tyStringSequence& paValue,
+                                                            const UVServerAppServer::tyStringSequence& paTypeValue,
+                                                            const UVServerAppServer::tyStringSequence& paLogExp,
+                                                            UVServerAppServer::tyStringSequence& paPropertiesReturn,
+                                                            UVServerAppServer::tyStringSequence& paValuesReturn,
+                                                            std::string& paReturnMessage,
+                                                            const Ice::Current&)
+{
+    IceUtil::Mutex::Lock loLock (meGeneralMutex);
+    try
+    {
+        vector<std::string> loProperties;
+        vector<QString> loPropertiesHelp;
+        vector<std::string> loValues;
+        vector<QString> loValuesHelp;
+        vector<std::string> loTypeValue;
+        vector<QString> loTypeValueHelp;
+        vector<std::string> loLogExp;
+        vector<QString> loLogExpHelp;
+
+
+        vector<std::string> loValuesReturn;
+        vector<QString> loValuesReturnHelp;
+
+        vector<std::string> loPropertiesReturn;
+        vector<QString> loPropertiesReturnHelp;
+
+        QString loReturnMessage;
+
+        copy(paProperties.begin(), paProperties.end(), back_inserter(loProperties));
+        for (int i = 0; i < loProperties.size(); i++)
+        {
+            loPropertiesHelp.push_back(QString(loProperties[i].c_str()));
+        }
+
+        copy(paValue.begin(), paValue.end(), back_inserter(loValues));
+        for (int i = 0; i < loValues.size(); i++)
+        {
+            loValuesHelp.push_back(QString(loValues[i].c_str()));
+        }
+
+        copy(paTypeValue.begin(), paTypeValue.end(), back_inserter(loTypeValue));
+        for (int i = 0; i < loTypeValue.size(); i++)
+        {
+            loTypeValueHelp.push_back(QString(loTypeValue[i].c_str()));
+        }
+
+        cout << "size " << paLogExp.size() << endl;
+        copy(paLogExp.begin(), paLogExp.end(), back_inserter(loLogExp));
+        for (int i = 0; i < loLogExp.size(); i++)
+        {
+            loLogExpHelp.push_back(QString(loLogExp[i].c_str()));
+        }
+
+
+
+        //bool getFromTableDatabaseByProperty(QString paTableName, QString paStartValue, QString paMaxValue,vector <QString> paProperties,vector <QString> paValue,vector <QString> paTypeValue, vector <QString> paLogExp, vector <QString> &paReturnId, QString &paMessage);
+        if(meDatabaseClass->getFromTableDatbaseByPropertyRepresentProp(QString(paTableName.c_str()),QString(paStartValue.c_str()),QString(paMaxValue.c_str()),loPropertiesHelp,loValuesHelp,loTypeValueHelp,loLogExpHelp,loPropertiesReturnHelp,loValuesReturnHelp,loReturnMessage))
+        {
+
+            for(int j = 0; j < loPropertiesReturnHelp.size(); j ++)
+            {
+                loPropertiesReturn.push_back(string(loPropertiesReturnHelp[j].toUtf8()));
+                loValuesReturn.push_back(string(loValuesReturnHelp[j].toUtf8()));
+            }
+            copy(loPropertiesReturn.begin(),loPropertiesReturn.end(),back_inserter(paPropertiesReturn));
+            copy(loValuesReturn.begin(),loValuesReturn.end(),back_inserter(paValuesReturn));
+
+            paReturnMessage = string(loReturnMessage.toUtf8());
+            return true;
+        }
+        else
+        {
+            paReturnMessage = string(loReturnMessage.toUtf8());
+            return false;
+        }
+        return true;
+    }
+    catch(exception &e)
+    {
+        meIceClientLogging->insertItem("1","2UVLogServer.exe",e.what());
+        return false;
+    }
+}
 
 bool clServer_impl::getFromTableDatabaseById(   const std::string& paTableName,
                                                 const std::string& paId,

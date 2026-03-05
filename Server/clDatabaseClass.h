@@ -48,6 +48,9 @@ public:
     bool deleteIntoTableDatabase(QString paTableName,QString paId, QString &paMessage);
     bool getFromTableDatabaseGeneral(QString paTableName,QString paStartValue, QString paMaxValue, vector <QString> &paReturnId, vector <QString> &paReturnName, QString &paMessage);
     bool getFromTableDatabaseByProperty(QString paTableName, QString paStartValue, QString paMaxValue,vector <QString> paProperties,vector <QString> paValue,vector <QString> paTypeValue, vector <QString> paLogExp, vector <QString> &paReturnId, QString &paMessage);
+
+    bool getFromTableDatbaseByPropertyRepresentProp(QString paTableName, QString paStartValue, QString paMaxValue,vector <QString> paProperties,vector <QString> paValue,vector <QString> paTypeValue, vector <QString> paLogExp, vector <QString> &paPropertiesReturn, vector <QString> &paValuesReturn, QString &paMessage);
+
     bool getFromTableDatabaseById(QString paTableName, QString paId, vector<QString> paProperties, vector<QString> &paReturnValue, QString &paMessage);
 
     //Getters

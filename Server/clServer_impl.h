@@ -84,6 +84,18 @@ public:
                                                     std::string& paReturnMessage,
                                                     const Ice::Current&);
 
+    virtual bool getFromTableDatbaseByPropertyRepresentProp(    const std::string& paTableName,
+                                                                const std::string& paStartValue,
+                                                                const std::string& paMaxValue,
+                                                                const UVServerAppServer::tyStringSequence& paProperties,
+                                                                const UVServerAppServer::tyStringSequence& paValue,
+                                                                const UVServerAppServer::tyStringSequence& paTypeValue,
+                                                                const UVServerAppServer::tyStringSequence& paLogExp,
+                                                                UVServerAppServer::tyStringSequence& paPropertiesReturn,
+                                                                UVServerAppServer::tyStringSequence& paVauesReturn,
+                                                                std::string& paReturnMessage,
+                                                                const Ice::Current&);
+
     virtual bool getFromTableDatabaseById(  const std::string& paTableName,
                                             const std::string& paId,
                                             const UVServerAppServer::tyStringSequence& paProperties,

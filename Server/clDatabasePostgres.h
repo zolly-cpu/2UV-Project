@@ -55,6 +55,8 @@ public:
     bool getFromTableDatabaseGeneral(QString paTableName,QString paStartValue, QString paMaxValue, vector <QString> &paReturnId, vector <QString> &paReturnName, QString &paMessage);
 	bool getFromTableDatabaseGeneralOrdered(QString paTableName,QString paStartValue, QString paMaxValue, QString paOrderBy, vector <QString> &paReturnId, vector <QString> &paReturnName, QString &paMessage);
     bool getFromTableDatabaseByProperty(QString paTableName, QString paStartValue, QString paMaxValue,vector <QString> paProperties,vector <QString> paValue, vector <QString> paTypeValue,vector <QString> paLogExp, vector <QString> &paReturnId, QString &paMessage);
+
+    bool getFromTableDatabaseByPropertyRepresentProp(QString paTableName, QString paStartValue, QString paMaxValue,vector <QString> paProperties,vector <QString> paValue, vector <QString> paTypeValue,vector <QString> paLogExp, vector <QString> &paPropertiesReturn, vector <QString> &paValuesReturn, QString &paMessage);
 	bool getFromTableDatabaseByPropertyOrdered(QString paTableName, QString paStartValue, QString paMaxValue,vector <QString> paProperties,vector <QString> paValue, vector <QString> paTypeValue,vector <QString> paLogExp, QString paOrderBy, vector <QString> &paReturnId, QString &paMessage);
     bool getFromTableDatabaseById(QString paTableName, QString paId, vector<QString> paProperties, vector<QString> &paReturnValue, QString &paMessage);
 
@@ -110,7 +112,9 @@ private:
     bool getFromTableGeneral(QString paTableName,QString paStartValue, QString paMaxValue, vector <QString> &paReturnId, vector <QString> &paReturnName,QString &paMessage);
 	bool getFromTableGeneralOrdered(QString paTableName,QString paStartValue, QString paMaxValue, QString paOrderBy, vector <QString> &paReturnId, vector <QString> &paReturnName,QString &paMessage);
     bool getFromTableByProperty(QString paTableName, QString paStartValue, QString paMaxValue,vector <QString> paProperties,vector <QString> paValue, vector <QString> paTypeValue,vector <QString> paLogExp, vector <QString> &paReturnId,QString &paMessage);
-	bool getFromTableByPropertyOrdered(QString paTableName, QString paStartValue, QString paMaxValue,vector <QString> paProperties,vector <QString> paValue, vector <QString> paTypeValue,vector <QString> paLogExp, QString paOrderBy, vector <QString> &paReturnId,QString &paMessage);
+    bool getFromTableByPropertyRepresentProp(QString paTableName, QString paStartValue, QString paMaxValue,vector <QString> paProperties,vector <QString> paValue, vector <QString> paTypeValue,vector <QString> paLogExp, vector <QString> &paPropertiesReturn, vector <QString> &paValuesReturn,QString &paMessage);
+
+    bool getFromTableByPropertyOrdered(QString paTableName, QString paStartValue, QString paMaxValue,vector <QString> paProperties,vector <QString> paValue, vector <QString> paTypeValue,vector <QString> paLogExp, QString paOrderBy, vector <QString> &paReturnId,QString &paMessage);
     bool getFromTableById(QString paTableName, QString paId, vector<QString> paProperties, vector<QString> &paReturnValue, QString &paMessage);
 
 

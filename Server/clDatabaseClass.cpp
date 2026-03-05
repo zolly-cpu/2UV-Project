@@ -588,6 +588,36 @@ bool clDatabaseClass::getFromTableDatabaseByProperty(QString paTableName, QStrin
         return false;
     }
 }
+bool clDatabaseClass::getFromTableDatbaseByPropertyRepresentProp(QString paTableName, QString paStartValue, QString paMaxValue,vector <QString> paProperties,vector <QString> paValue,vector <QString> paTypeValue, vector <QString> paLogExp, vector <QString> &paPropertiesReturn, vector <QString> &paValuesReturn, QString &paMessage)
+{
+    try
+    {
+        switch(getIDatabaseTech())
+        {
+            case 1:
+                return meDatabasePostgres->getFromTableDatabaseByPropertyRepresentProp( paTableName, paStartValue, paMaxValue, paProperties, paValue, paTypeValue, paLogExp, paPropertiesReturn, paValuesReturn, paMessage);
+                break;
+            case 2:
+                //meDatabaseMySql = new clDatabaseMySql(getUserName(),getPassword(),getDataseName(),getHostAdress(),getPort());
+                break;
+            case 3:
+                //meDatabaseOracle = new clDatabaseOracle(getUserName(),getPassword(),getDataseName(),getHostAdress(),getPort());
+                break;
+            default:
+                QString loTemp("bool clDatabaseClass::getFromTableDatbaseByPropertyRepresentProp(QString paTableName, QString paStartValue, QString paMaxValue,vector <QString> paProperties,vector <QString> paValue,vector <QString> paTypeValue, vector <QString> paLogExp, vector <QString> &paPropertiesReturn, vector <QString> &paValuesReturn, QString &paMessage) -> Tech '" + getDatabaseTech() + "' not supported ...");
+                paMessage = loTemp;
+                return false;
+                break;
+        }
+        return true;
+    }
+    catch(...)
+    {
+        QString loTemp("bool clDatabaseClass::getFromTableDatbaseByPropertyRepresentProp(QString paTableName, QString paStartValue, QString paMaxValue,vector <QString> paProperties,vector <QString> paValue,vector <QString> paTypeValue, vector <QString> paLogExp, vector <QString> &paPropertiesReturn, vector <QString> &paValuesReturn, QString &paMessage) -> error ...");
+        paMessage = loTemp;
+        return false;
+    }
+}
 //Get From Database by id
 bool clDatabaseClass::getFromTableDatabaseById(QString paTableName, QString paId, vector<QString> paProperties, vector<QString> &paReturnValue, QString &paMessage)
 {
