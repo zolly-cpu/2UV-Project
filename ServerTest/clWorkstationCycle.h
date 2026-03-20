@@ -36,7 +36,7 @@
 #include "clIceClientServer.h"
 #include "clMethodCall.h"
 #include "clMethodCallHeader.h"
-
+#include "clClassLoader.h"
 
 #define pyscope() \
     PyGILState_STATE gstate = PyGILState_Ensure(); \
@@ -53,7 +53,7 @@ class clWorkstationCycle : public QThread
 {
     Q_OBJECT
 public:
-    clWorkstationCycle(clIceClientServer * paIceClientServer, clIceClientLogging *paIceClientLogging, QString paObjectId, QMutex * paLock, QObject * parent = 0);
+    clWorkstationCycle(clIceClientServer * paIceClientServer, clIceClientLogging *paIceClientLogging, QString paObjectId, QMutex * paLock, clClassLoader * paClassLoader, QObject * parent = 0);
     ~clWorkstationCycle();
 
 
@@ -79,7 +79,7 @@ private:
 	
 	clIceClientLogging * meIceClientLogging;
 	clIceClientServer * meIceClientServer;
-	PyThreadState* pThreadState;
+	//PyThreadState* pThreadState;
 	
 	enum Choice
 	{
@@ -127,6 +127,7 @@ public:
 	bool meQuit;
 	
 	QMutex * meLock;
+	clClassLoader * meClassLoader;
 	//PyMutex * meLock;
 };
 //! [0]

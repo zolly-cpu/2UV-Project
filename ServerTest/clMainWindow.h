@@ -1,13 +1,15 @@
 #ifndef CLMAINWINDOW_H_WVD_08102011
 #define CLMAINWINDOW_H_WVD_08102011
 
+#undef slots
+#include <Python.h>
+#define slots Q_SLOTS
+
 #include <string>
 #include <iostream>
 #include <vector>
 #include <exception>
 #include <stdio.h>
-//#include <windows.h>
-//#include <tchar.h>
 #include <stdlib.h>
 
 
@@ -38,7 +40,7 @@
 #include <QtCore/QObject>
 #include <QtCore/QThread>
 #include <QtCore/QTimer>
-
+#include <QtCore/QMutex>
 
 
 
@@ -62,8 +64,8 @@ public:
     clMainWindow (int paArgc, char * paArgv[], QWidget* paParent = 0, const char* paName = 0);
     ~clMainWindow ();
 public:
-
-
+	QMutex meLock;
+	PyThreadState* tstate;
 public slots:
 
     void exitApplication();
@@ -112,6 +114,7 @@ private:
     Ice::CommunicatorPtr meIceCommunicatorServer;
     void initializeServerClient(int paArgc, char * paArgv[]);
 
+	void initializePython();
 
 	clLivingObject *meLivingObjects;
 	void initializeLivingObject(clIceClientServer * paIceClientServer, clIceClientLogging *paIceClientLogging);

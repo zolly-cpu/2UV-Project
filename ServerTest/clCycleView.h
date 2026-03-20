@@ -1,4 +1,4 @@
-	#ifndef CLCYCLEVIEW_H
+#ifndef CLCYCLEVIEW_H
 #define CLCYCLEVIEW_H
 
 #include <exception>

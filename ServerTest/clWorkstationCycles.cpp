@@ -1,13 +1,14 @@
 #define INFO_BUFFER_SIZE 32767
 #include "clWorkstationCycles.h"
 
-clWorkstationCycles::clWorkstationCycles(clIceClientServer * paIceClientServer, clIceClientLogging *paIceClientLogging)
+clWorkstationCycles::clWorkstationCycles(clIceClientServer * paIceClientServer, clIceClientLogging *paIceClientLogging, QMutex * paLock, clClassLoader * paClassLoader)
 {
 	try
 	{
 		meIceClientServer = paIceClientServer;
 		meIceClientLogging = paIceClientLogging;
-		
+		meLock = paLock;
+		meClassLoader = paClassLoader;
 		//////// Getting the cycles for this machine /////////////////////
 		getWorkstationCycles();
 	}
@@ -24,8 +25,8 @@ clWorkstationCycles::~clWorkstationCycles()
 	Py_Finalize() ;
 	*/
 	
-	PyGILState_Ensure(); // PyEval_RestoreThread(tstate); seems to work just as well
-	Py_Finalize();
+	//PyGILState_Ensure();
+	//Py_Finalize();
 	
 	for (int i=0; i < 20; i++)
 	{
@@ -71,17 +72,17 @@ bool clWorkstationCycles::getWorkstationCycles()
 		
 		
 		// initialize Python
-		Py_Initialize() ;
-		PyEval_InitThreads() ; // nb: creates and locks the GIL
+		//Py_Initialize() ;
+		//PyEval_InitThreads() ; // nb: creates and locks the GIL
 		// NOTE: We save the current thread state, and restore it when we unload,
 		// so that we can clean up properly.
-		tstate = PyEval_SaveThread() ;
+		//tstate = PyEval_SaveThread() ;
 		
 		//Set the threads
 		for (int i = 0; i < loReturnIds.size(); i++)
 		{
 			//Starting the threads//
-			meWorkstationCycle[i] = new clWorkstationCycle(meIceClientServer, meIceClientLogging, QString(loReturnIds.at(i).c_str()), &meLock, this);
+			meWorkstationCycle[i] = new clWorkstationCycle(meIceClientServer, meIceClientLogging, QString(loReturnIds.at(i).c_str()), meLock, meClassLoader, this);
 			connect(meWorkstationCycle[i], &clWorkstationCycle::resultReady, this, &clWorkstationCycles::handleResults);
 			//connect(meWorkstationCycle[i], &clWorkstationCycle::finished, meWorkstationCycle[i], &QObject::deleteLater);
 			meWorkstationCycle[i]->start();

@@ -10,6 +10,7 @@ InstallDir = myenv['BINDIR_ServerTest']
 SourcesQtTest = [ 'clMain.cpp',
                   myenv.Moc('clComboBoxExtend.h'),
                   myenv.Moc('clLivingObjectMach.h'),
+                  myenv.Moc('clLivingObjectLocator.h'),
                   myenv.Moc('clMainWindow.h'),
                   myenv.Moc('clParameterView.h'),
                   myenv.Moc('clClassObjectTreeItem.h'),
@@ -56,6 +57,7 @@ SourcesQtTest = [ 'clMain.cpp',
                   'clGraphwidget.cpp',
                   'clLivingObject.cpp',
                   'clLivingObjectMach.cpp',
+                  'clLivingObjectLocator.cpp',
                   'clWorkstationCycles.cpp',
                   'clWorkstationCycle.cpp',
                   'clClassLoader.cpp',
@@ -77,6 +79,6 @@ DatabaseProg = myenv.Program('2UVServerTest', SourcesQtTest,
                     'libIceDiscovery',
                     'libIceLocatorDiscovery',
                     'libIceSSL',
-                    'libpython3.13'
+                    'libpython3.12'
                         ])
 myenv.Install (InstallDir, DatabaseProg)

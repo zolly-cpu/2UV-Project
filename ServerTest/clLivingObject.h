@@ -8,19 +8,21 @@
 #include <QtCore/QThread>
 #include <QtCore/QString>
 #include <QtCore/QDateTime>
-#include <QtNetwork/QHostInfo>
+#include <QtCore/QMutex>
 
 
 #include "clIceClientLogging.h"
 #include "clIceClientServer.h"
 #include "clLivingObjectMach.h"
+#include "clLivingObjectLocator.h"
+#include "clClassLoader.h"
 
 //! [0]
 class clLivingObject
 {
 
 public:
-    clLivingObject(clIceClientServer * paIceClientServer, clIceClientLogging *paIceClientLogging);
+    clLivingObject(clIceClientServer * paIceClientServer, clIceClientLogging *paIceClientLogging, QMutex * paLock, clClassLoader * paClassLoader);
     ~clLivingObject();
 
 
@@ -31,7 +33,11 @@ private:
 	clIceClientLogging * meIceClientLogging;
 	clIceClientServer * meIceClientServer;
 	clLivingObjectMach * meLivingObjectMach[200];
+	clLivingObjectLocator * meLivingObjectLocator[200];
 	QThread * meThread[200];
+	QMutex * meLock;
+	
+	clClassLoader * meClassLoader;
 };
 //! [0]
 

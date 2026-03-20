@@ -13,6 +13,30 @@ clObject::clObject(clIceClientServer * paIceClientServer, clIceClientLogging *pa
 		cout << "clWorkstationCycles::clWorkstationCycles -> failed" << endl;
 	}
 }
+clObject::clObject(clObject * paObject)
+{
+	try
+	{
+		
+		meIceClientLogging = paObject->meIceClientLogging;
+		meIceClientServer = paObject->meIceClientServer;
+
+		ClassName = paObject->ClassName;
+		ObjectId = paObject->ObjectId;
+
+		meObjectCalls = paObject->meObjectCalls;
+		meClassNameList = paObject->meClassNameList;
+		meClassMethodsList = paObject->meClassMethodsList;
+
+		meMethodCalls = paObject->meMethodCalls;
+		meMethodNamesList = paObject->meMethodNamesList;
+
+		meDatabaseColumnsByClassNameList = paObject->meDatabaseColumnsByClassNameList;
+	}
+	catch(...)
+	{
+	}
+}
 clObject::~clObject()
 {
 }

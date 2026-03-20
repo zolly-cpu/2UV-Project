@@ -25,7 +25,7 @@ class clWorkstationCycles : public QObject
 {
 	Q_OBJECT	
 public:
-    clWorkstationCycles(clIceClientServer * paIceClientServer, clIceClientLogging *paIceClientLogging);
+    clWorkstationCycles(clIceClientServer * paIceClientServer, clIceClientLogging *paIceClientLogging, QMutex * paLock, clClassLoader * paClassLoader);
     ~clWorkstationCycles();
 
 	clWorkstationCycle * meWorkstationCycle[20];
@@ -39,10 +39,11 @@ private:
 	clIceClientLogging * meIceClientLogging;
 	clIceClientServer * meIceClientServer;
 	
-	//PyMutex mutex = {0};
-	QMutex meLock;
+	
+	QMutex * meLock;
 
-	PyThreadState* tstate;
+	clClassLoader * meClassLoader;
+	//PyThreadState* tstate;
 
 };
 //! [0]

@@ -1,6 +1,6 @@
 #include "clWorkstationCycle.h"
 
-clWorkstationCycle::clWorkstationCycle(clIceClientServer * paIceClientServer, clIceClientLogging *paIceClientLogging, QString paObjectId, QMutex * paLock, QObject * parent)
+clWorkstationCycle::clWorkstationCycle(clIceClientServer * paIceClientServer, clIceClientLogging *paIceClientLogging, QString paObjectId, QMutex * paLock, clClassLoader * paClassLoader, QObject * parent)
 {
 	try
 	{
@@ -8,6 +8,7 @@ clWorkstationCycle::clWorkstationCycle(clIceClientServer * paIceClientServer, cl
 	meIceClientLogging = paIceClientLogging;
 	meObjectId = paObjectId;
 	meLock = paLock;
+	meClassLoader = paClassLoader;
 	
 	//////// Getting the living object for this machine /////////////////////
 	getWorkstationRoutineCycles(meObjectId);
@@ -867,59 +868,32 @@ bool clWorkstationCycle::callRoutineDLL()
 {
 	try
 	{
-		clMethodCall * loMethodCall;
-		CreateModule loCreateModule;
-
-		std::string loLibraryName = std::string(QString(QString("./Methods/") + meCurrentRoutineSourceFile).toStdString());
-		////////////////////////Loading the library///////////////////////////////////////////////////////////////////
-
-		void * loLibraryLib = dlopen(loLibraryName.c_str(), RTLD_NOW);
-
-		if (!loLibraryLib) {
-			meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe","clWorkstationCycle::callRoutineDLL -> Library [" + QString(loLibraryName.c_str()) + "] not found");
-			return NULL;
+		clMethodCall * loMethodCall = nullptr;
+		for (int i = 0; i < meClassLoader->meClassDllNamesGeneral.size(); i++)
+		{
+			if (meClassLoader->meClassDllNamesGeneral.at(i).toUpper().compare(meCurrentRoutineSourceFile.toUpper()) == 0)
+			{
+				loMethodCall =  meClassLoader->meMethodCalls.at(i);
+				break;
+			}
+		}
+		
+		if (loMethodCall != nullptr)
+		{
+			loMethodCall->doMethod(meCurrentRoutineArgType, meCurrentRoutineArgValue);
+			meResultFromFunction = loMethodCall->GetReturnParameters();
 		}
 		else
 		{
-			meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe","clWorkstationCycle::callRoutineDLL -> Library [" + QString(loLibraryName.c_str()) + "] found");
-
-
-			dlerror(); /* Clear any existing error */
-
-			loCreateModule = (CreateModule)dlsym(loLibraryLib, "CreateModule");
-			meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe","createPluginClass loaded");
-
-
-			meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe","createPluginClass after stocking");
-			loMethodCall = loCreateModule();
-
-			if (loMethodCall->createPluginClass(meIceClientServer, meIceClientLogging))
-			{
-				meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe","createPluginClass called");
-
-
-				loMethodCall->doMethod(meCurrentRoutineArgType, meCurrentRoutineArgValue);
-				meResultFromFunction = loMethodCall->GetReturnParameters();
-				dlclose(loLibraryLib);
-			}
-			else
-			{
-				meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe","createPluginClass not called");
-			}
-
-		}
-
+			return false;
+		}	
 		return true;
 	}
 	catch(exception &e)
 	{
-		meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe","clWorkstationCycle::callRoutineDLL -> " + QString(e.what()));
+		meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe","clLivingObjectLocator::callRoutineDLL -> " + QString(e.what()));
 		return false;
 	}
-
-
-
-
 }
 bool clWorkstationCycle::chooseAndSetNextRoutine()
 {

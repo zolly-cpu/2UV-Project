@@ -8,10 +8,10 @@ clMainWindow::clMainWindow(int paArgc, char * paArgv[], QWidget* paParent, const
         initializeLogClient(paArgc,paArgv);
 
         initializeServerClient(paArgc,paArgv);
-		
-		initializeLivingObject(meIceClientServer, meIceClientLogging);
-		initializeWorkstationCycles(meIceClientServer, meIceClientLogging);
+
 		initializeClassLoader(meIceClientServer, meIceClientLogging);
+		
+		initializePython();
 		
         meWorkspace = new QMdiArea;
         setCentralWidget(meWorkspace);
@@ -41,6 +41,31 @@ clMainWindow::~clMainWindow()
     //Clean up the memory
     //delete meDatabaseClass;
     //delete meXMLReader;
+    PyGILState_Ensure();
+	Py_Finalize();
+}
+/********************************
+ * 
+ * *****************************/
+void clMainWindow::initializePython()
+{
+	try
+	{
+		// initialize Python
+		Py_Initialize() ;
+		PyEval_InitThreads() ; // nb: creates and locks the GIL
+		// NOTE: We save the current thread state, and restore it when we unload,
+		// so that we can clean up properly.
+		tstate = PyEval_SaveThread() ;
+		
+		initializeLivingObject(meIceClientServer, meIceClientLogging);
+		initializeWorkstationCycles(meIceClientServer, meIceClientLogging);
+		
+	}
+	catch(...)
+	{
+		cout << "Python not initialized" << endl;
+	}
 }
 /*****************************
 * ICE FUNCTIONS
@@ -95,7 +120,7 @@ void clMainWindow::initializeLivingObject(clIceClientServer * paIceClientServer,
 {
 	try
 	{
-		meLivingObjects = new clLivingObject(meIceClientServer, meIceClientLogging);
+		meLivingObjects = new clLivingObject(meIceClientServer, meIceClientLogging, &meLock, meClassLoader);
 	}
 	catch(...)
 	{
@@ -117,7 +142,7 @@ void clMainWindow::initializeWorkstationCycles(clIceClientServer * paIceClientSe
 {
 	try
 	{
-		meWorkstationCycles = new clWorkstationCycles(meIceClientServer, meIceClientLogging);
+		meWorkstationCycles = new clWorkstationCycles(meIceClientServer, meIceClientLogging, &meLock, meClassLoader);
 	}
 	catch(...)
 	{

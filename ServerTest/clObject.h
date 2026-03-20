@@ -20,15 +20,16 @@
 #include "clIceClientLogging.h"
 #include "clIceClientServer.h"
 #include "clObjectCall.h"
-#include "clObjectCallHeader.h"
+//#include "clObjectCallHeader.h"
 #include "clMethodCall.h"
-#include "clMethodCallHeader.h"
+//#include "clMethodCallHeader.h"
 
 class clObject
 {
 
 public:
     clObject(clIceClientServer * paIceClientServer, clIceClientLogging *paIceClientLogging);
+    clObject(clObject * paObject);
     ~clObject();
 	
 private:
@@ -36,8 +37,7 @@ private:
 	bool createObject(QString paClassName, QString paObjectId, clObject &paObject);
 	bool getTypeFromTableInformation(QString paClassName,QString paPropertyName, QString &paPropertyType);
 	
-	clIceClientLogging * meIceClientLogging;
-	clIceClientServer * meIceClientServer;	
+	
 
 public:
 
@@ -78,8 +78,13 @@ public:
 	bool doMethod(QString paMethodName, const vector <QString> &paParametersType, const vector <QString> &paParameters, const vector <QString> &paParametersValue, const vector <QString> &paLogExp);
 	int getParameters();
 
+
+	clIceClientLogging * meIceClientLogging;
+	clIceClientServer * meIceClientServer;
+
 	QString ClassName;
 	QString ObjectId;
+	QString ObjectName;
 
 	vector <clObjectCall *> meObjectCalls;
 	vector <QString> meClassNameList;

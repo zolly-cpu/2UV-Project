@@ -1,15 +1,17 @@
 #define INFO_BUFFER_SIZE 32767
 #include "clLivingObject.h"
 
-clLivingObject::clLivingObject(clIceClientServer * paIceClientServer, clIceClientLogging *paIceClientLogging)
+clLivingObject::clLivingObject(clIceClientServer * paIceClientServer, clIceClientLogging *paIceClientLogging, QMutex * paLock, clClassLoader * paClassLoader)
 {
 	try
 	{
     meIceClientServer = paIceClientServer;
 	meIceClientLogging = paIceClientLogging;
-	
+	meLock = paLock;
+	meClassLoader = paClassLoader;
 	//////// Getting the living object for this machine /////////////////////
 	getLivingObjectsForThisWorkstation();
+	
 	
 	}
 	catch(...)
@@ -25,10 +27,9 @@ clLivingObject::~clLivingObject()
 }
 bool clLivingObject::getLivingObjectsForThisWorkstation()
 {
-	
 	try
 	{
-		////////////////////////////////////////// Getting the operations ///////////////////////////////////////////////////////////////
+		////////////////////////////////////////// Getting the living objects machine ///////////////////////////////////////////////////////////////
 		QString loTableName("living_obj_mach");
 		vector <std::string> loProperties;
 		vector <std::string> loValues;
@@ -42,36 +43,67 @@ bool clLivingObject::getLivingObjectsForThisWorkstation()
 		loTypeValues.push_back(QString("text").toStdString());
 		loLogExp.push_back(QString("=").toStdString());
 		
-		QString loStart = QString("0");
-		QString loStop = QString("0");
+		QString loStartStopTemp = QString("0");
 		
-		
-		if (!meIceClientServer->getFromTableDatbaseByProperty(loTableName,loStart,loStop,loProperties,loValues,loTypeValues,loLogExp,loReturnIds,loReturnMessage))
+		if (!meIceClientServer->getFromTableDatbaseByProperty(loTableName,loStartStopTemp,loStartStopTemp,loProperties,loValues,loTypeValues,loLogExp,loReturnIds,loReturnMessage))
 		{
 			meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe","clLivingObject::getLivingObjectsForThisWorkstation() -> " + loReturnMessage);
 			return false;
 		}
 		else
 			meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe","clLivingObject::getLivingObjectsForThisWorkstation() -> " + loReturnMessage);
-				
-		if (loReturnIds.size() < 1) return false;
 		
-		for (int i = 0; i < loReturnIds.size(); i++)
+		
+		int loThreadNumber = 0;
+		
+		if (loReturnIds.size() > 0)
 		{
-			meThread[i] = new QThread();
-			meLivingObjectMach[i] = new clLivingObjectMach(meIceClientServer, meIceClientLogging, QString(loReturnIds.at(i).c_str()));
-			meLivingObjectMach[i]->moveToThread(meThread[i]);
-			/*
-worker->moveToThread(thread);
-connect( worker, &Worker::error, this, &MyClass::errorString);
-connect( thread, &QThread::started, worker, &Worker::process);
-connect( worker, &Worker::finished, thread, &QThread::quit);
-connect( worker, &Worker::finished, worker, &Worker::deleteLater);
-connect( meThread[i], &QThread::finished, meThread[i], &QThread::deleteLater);
-			*/
-			meThread[i]->start();
-
-			
+			for (int i = 0; i < loReturnIds.size(); i++)
+			{
+				meThread[loThreadNumber] = new QThread();
+				meLivingObjectMach[i] = new clLivingObjectMach(meIceClientServer, meIceClientLogging, QString(loReturnIds.at(i).c_str()), meLock);
+				meLivingObjectMach[i]->moveToThread(meThread[loThreadNumber]);
+				meThread[loThreadNumber]->start();
+				loThreadNumber = loThreadNumber + 1;	
+			}
+		}
+		////////////////////////////////////////// Getting the living objects location ///////////////////////////////////////////////////////////////
+		QString loTableNameLocation("LIVING_OBJ_LOCATION");
+		vector <std::string> loPropertiesLoc;
+		vector <std::string> loValuesLoc;
+		vector <std::string> loTypeValuesLoc;
+		vector <std::string> loLogExpLoc;
+		vector <std::string> loReturnIdsLoc;
+		QString loReturnMessageLoc;
+		
+		loPropertiesLoc.push_back(QString("WORKSTATION_NAME").toStdString());
+		loValuesLoc.push_back(QString(QHostInfo::localHostName()).toStdString());
+		loTypeValuesLoc.push_back(QString("text").toStdString());
+		loLogExpLoc.push_back(QString("=").toStdString());
+		
+		QString loStartStop = QString("0");
+		
+		
+		
+		if (!meIceClientServer->getFromTableDatbaseByProperty(loTableNameLocation,loStartStop,loStartStop,loPropertiesLoc,loValuesLoc,loTypeValuesLoc,loLogExpLoc,loReturnIdsLoc,loReturnMessageLoc))
+		{
+			meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe","clLivingObject::getLivingObjectsForThisWorkstation() -> " + loReturnMessageLoc);
+			return false;
+		}
+		else
+			meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe","clLivingObject::getLivingObjectsForThisWorkstation() -> " + loReturnMessageLoc);
+				
+		if (loReturnIdsLoc.size() > 0)
+		{		
+			for (int i = 0; i < loReturnIdsLoc.size(); i++)
+			{
+				
+				meThread[loThreadNumber] = new QThread();
+				meLivingObjectLocator[i] = new clLivingObjectLocator(meIceClientServer, meIceClientLogging, QString(loReturnIdsLoc.at(i).c_str()), meLock, meClassLoader);
+				meLivingObjectLocator[i]->moveToThread(meThread[loThreadNumber]);
+				meThread[loThreadNumber]->start();
+				loThreadNumber = loThreadNumber + 1;		
+			}		
 		}
 		return true;
 	}

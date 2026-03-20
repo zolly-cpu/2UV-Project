@@ -1,7 +1,7 @@
 #define INFO_BUFFER_SIZE 32767
-#include "clLivingObject.h"
+#include "clLivingObjectLocator.h"
 
-clLivingObjectMach::clLivingObjectMach(clIceClientServer * paIceClientServer, clIceClientLogging *paIceClientLogging, QString paObjectId, QMutex * paLock, QObject * parent)
+clLivingObjectLocator::clLivingObjectLocator(clIceClientServer * paIceClientServer, clIceClientLogging *paIceClientLogging, QString paObjectId, QMutex * paLock, clClassLoader * paClassLoader, QObject * parent)
 {
 	try
 	{
@@ -9,9 +9,10 @@ clLivingObjectMach::clLivingObjectMach(clIceClientServer * paIceClientServer, cl
 	meIceClientLogging = paIceClientLogging;
 	meObjectId = paObjectId;
 	meLock = paLock;
+	meClassLoader = paClassLoader;
 	
 	//////// Getting the living object for this machine /////////////////////
-	getLivingObjectMachProperties();
+	getLivingObjectLocatorProperties();
 	
 	
 	meSocket = NULL;
@@ -24,18 +25,17 @@ clLivingObjectMach::clLivingObjectMach(clIceClientServer * paIceClientServer, cl
 	}
 	catch(...)
 	{
-		cout << "clLivingObjectMach::clLivingObjectMach -> failed" << endl;
+		cout << "clLivingObjectLocator::clLivingObjectLocator -> failed" << endl;
 		
 	}
 }
 
-clLivingObjectMach::~clLivingObjectMach()
+clLivingObjectLocator::~clLivingObjectLocator()
 {
 
 }
-bool clLivingObjectMach::getLivingObjectMachProperties()
+bool clLivingObjectLocator::getLivingObjectLocatorProperties()
 {
-	
 	try
 	{
 			/*****************************************
@@ -47,13 +47,10 @@ bool clLivingObjectMach::getLivingObjectMachProperties()
 			 vector<std::string> loExtra;
 			 vector<std::string> loReference;
 			 QString loReturnMessageObject;
-	
-			 
-			 
-			 QString loClassName = QString("living_obj_mach");
-			 
-			 
-			 meIceClientServer->getAllPropertiesFromTable(  loClassName,
+
+			 QString loClassNameTemp01 =  QString("LIVING_OBJ_LOCATION");
+			
+			 meIceClientServer->getAllPropertiesFromTable(  loClassNameTemp01,
 															loPropertyName,
 															loAlias,
 															loType,
@@ -64,7 +61,7 @@ bool clLivingObjectMach::getLivingObjectMachProperties()
 			meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe","clLivingObjectMach::getLivingObjectMachProperties -> " + loReturnMessageObject);
 
 			
-			for (int j=0; j < (int) loPropertyName.size(); j++)
+			for (int j=0; j< loPropertyName.size(); j++)
 			{
 				clDatabaseColumn loDatabaseColumn(  QString(loPropertyName[j].c_str()),
 													QString(loAlias[j].c_str()),
@@ -81,7 +78,7 @@ bool clLivingObjectMach::getLivingObjectMachProperties()
 			QString loReturnMessageGetById;
 			
 			
-			for (int i = 0; i < (int) meDatabaseColumnArr.size(); i++)
+			for (int i = 0; i < meDatabaseColumnArr.size(); i++)
 			{
 				clDatabaseColumn loDatabaseColumn = meDatabaseColumnArr.at(i);
 				loPropertyNames.push_back(loDatabaseColumn.getName().toStdString());
@@ -89,8 +86,10 @@ bool clLivingObjectMach::getLivingObjectMachProperties()
 			
 			
 			bool loGetID = false;
-			QString loClassNameId = QString("living_obj_mach");
-			loGetID = meIceClientServer->getFromTableDatabaseById(	loClassNameId,
+			
+			QString loClassNameTemp02 = QString("LIVING_OBJ_LOCATION");
+			
+			loGetID = meIceClientServer->getFromTableDatabaseById(	loClassNameTemp02,
 																	meObjectId,
 																	loPropertyNames,
 																	loReturnValues,
@@ -98,14 +97,14 @@ bool clLivingObjectMach::getLivingObjectMachProperties()
 																	
 			if (!loGetID)
 			{			
-				meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe","clParameterView::addElementsToQTreeWidgetSub -> " + loReturnMessageGetById);			
+				meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe","clLivingObjectLocator::getLivingObjectLocatorProperties -> " + loReturnMessageGetById);			
 				return false;
 			}
 			else
-				meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe","clParameterView::addElementsToQTreeWidgetSub -> " + loReturnMessageGetById);			
+				meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe","clLivingObjectLocator::getLivingObjectLocatorProperties -> " + loReturnMessageGetById);			
 			
 			//////////////////////////////// Set the connection parameters ////////////////////////////////////////////////////////////
-			for (int k = 0; k < (int) loPropertyNames.size(); k++)
+			for (int k = 0; k < loPropertyNames.size(); k++)
 			{
 				if (QString(loPropertyNames.at(k).c_str()).toUpper().compare("TIMER_CYCLE") == 0)
 					meTimerCycle = QString(loReturnValues.at(k).c_str());
@@ -120,13 +119,12 @@ bool clLivingObjectMach::getLivingObjectMachProperties()
 	}
 	catch(...)
 	{
-		meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe","clParameterView::addElementsToQTreeWidgetSub -> error");			
+		meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe","clLivingObjectLocator::getLivingObjectLocatorProperties -> error");			
 		return false;
 	}
 }
-void clLivingObjectMach::slotDoIt()
+void clLivingObjectLocator::slotDoIt()
 {
-	
 	try
 	{
 		if (meSocket == NULL)
@@ -134,14 +132,14 @@ void clLivingObjectMach::slotDoIt()
 			meSocket = new QTcpSocket( this ); // <-- needs to be a member variable: QTcpSocket * _pSocket;
 			connect( meSocket, SIGNAL(readyRead()), this, SLOT(readTcpData()) );
 		
-
-		
+			meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe","clLivingObjectLocator::slotDoIt -> connect to host " + QString(meSocketIp + "::"+ meSocketPort));				
+			
 			meSocket->connectToHost(meSocketIp, meSocketPort.toInt());
 			meSocket->waitForConnected();
 
 			if (meSocket->state() != QAbstractSocket::ConnectedState ) 
 			{
-				meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe","clLivingObjectMach::slotDoIt() -> cannot connect to host");			
+				meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe","clLivingObjectLocator::slotDoIt() -> cannot connect to host");			
 				delete meSocket;
 				meSocket = NULL;
 				
@@ -158,21 +156,21 @@ void clLivingObjectMach::slotDoIt()
 				QString loReturnMessage;
 				
 				
-				QString loClass = QString("living_obj_mach");
+				QString loClassNameTemp01 = QString("LIVING_OBJ_LOCATION");
 				
-				
-				meIceClientServer->updateIntoTableDatabase(     loClass,
+				meIceClientServer->updateIntoTableDatabase(     loClassNameTemp01,
 																meObjectId,
 																loColumns,
 																loValue,
 																loTypeValue,
 																loReturnMessage);
-				meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe","clLivingObjectMach::slotDoIt -> " + loReturnMessage);				
+				meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe","clLivingObjectLocator::slotDoIt -> " + loReturnMessage);				
 				
 				return;
 			}
 			else
 			{
+				meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe","clLivingObjectLocator::slotDoIt -> SOCKET CONNECTED");								
 				//////////////// Update the connection state ////////////////////////////////////////////////
 				vector<std::string> loColumns;
 				vector<std::string> loValue;
@@ -183,16 +181,15 @@ void clLivingObjectMach::slotDoIt()
 				loTypeValue.push_back("int");
 				QString loReturnMessage;
 				
-				QString loClass = QString("living_obj_mach");
+				QString loClassNameTemp02 = QString("LIVING_OBJ_LOCATION");
 				
-				
-				meIceClientServer->updateIntoTableDatabase(     loClass,
+				meIceClientServer->updateIntoTableDatabase(     loClassNameTemp02,
 																meObjectId,
 																loColumns,
 																loValue,
 																loTypeValue,
 																loReturnMessage);
-				meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe","clLivingObjectMach::slotDoIt -> " + loReturnMessage);								
+				meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe","clLivingObjectLocator::slotDoIt -> " + loReturnMessage);								
 			}
 		}
 		else
@@ -205,10 +202,9 @@ void clLivingObjectMach::slotDoIt()
 			
 			bool loGetById = false;
 			
-			QString loClass = QString("living_obj_mach");
+			QString loClassNameTemp03 = QString("LIVING_OBJ_LOCATION");
 			
-			
-            loGetById = meIceClientServer->getFromTableDatabaseById(    loClass,
+            loGetById = meIceClientServer->getFromTableDatabaseById(    loClassNameTemp03,
 																		meObjectId,
 																		loPropertyName,
 																		loReturnValues,
@@ -216,16 +212,16 @@ void clLivingObjectMach::slotDoIt()
 			
 			if(!loGetById)
 			{
-				meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe","clLivingObjectMach::slotDoIt -> " + loReturnMessageGetById);
+				meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe","clLivingObjectLocator::slotDoIt -> " + loReturnMessageGetById);
 				return;
 			}
 			else
-				meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe","clLivingObjectMach::slotDoIt -> " + loReturnMessageGetById);
+				meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe","clLivingObjectLocator::slotDoIt -> " + loReturnMessageGetById);
 			
 			
 			//////////////////////////////// Get the commands ////////////////////////////////////////////////////////////
 			QString loCommands;
-			for (int k = 0; k < (int) loPropertyName.size(); k++)
+			for (int k = 0; k < loPropertyName.size(); k++)
 			{
 				if (QString(loPropertyName.at(k).c_str()).toUpper().compare(QString("COMMANDS_TODO")) == 0)
 				{
@@ -257,7 +253,7 @@ void clLivingObjectMach::slotDoIt()
 				/////// Create command //////////////////////////
 				if (!createCommand(loCommand,loCommandSend))
 				{
-					meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe","clLivingObjectMach::slotDoIt -> createCommand fail, stopping slot");
+					meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe","clLivingObjectLocator::slotDoIt -> createCommand fail, stopping slot");
 					return;					
 				}
 				
@@ -275,7 +271,7 @@ void clLivingObjectMach::slotDoIt()
 				
 				std::string loValueArr = "";
 				
-				for (int y = 0; y < (int) loCommandList.size() - 1; y++)
+				for (int y = 0; y < loCommandList.size() - 1; y++)
 				{
 						if (loValueArr == "")
 						{
@@ -292,15 +288,15 @@ void clLivingObjectMach::slotDoIt()
 				loTypeValue.push_back("text[]");
 				QString loReturnMessage;
 				
-				QString loClass = QString("living_obj_mach");
 				
-				meIceClientServer->updateIntoTableDatabase(     loClass,
+				QString loClassNameTemp03 = QString("LIVING_OBJ_LOCATION");
+				meIceClientServer->updateIntoTableDatabase(     loClassNameTemp03,
 																meObjectId,
 																loColumns,
 																loValue,
 																loTypeValue,
 																loReturnMessage);
-				meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe","clLivingObjectMach::slotDoIt -> " + loReturnMessage);
+				meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe","clLivingObjectLocator::slotDoIt -> " + loReturnMessage);
 				
 			}
 			else
@@ -310,29 +306,31 @@ void clLivingObjectMach::slotDoIt()
 				/////// Create command //////////////////////////
 				if (!createCommand(loCommand,loCommandSend))
 				{
-					meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe","clLivingObjectMach::slotDoIt -> createCommand fail, stopping slot");
+					meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe","clLivingObjectLocator::slotDoIt -> createCommand fail, stopping slot");
 					return;					
 				}				
 			}
 			/////////////////////////////// If no command should be performed do state command //////////////////////
-			meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe",QString("clLivingObjectMach::slotDoIt() command send to machine -> " + loCommandSend));
+			meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe",QString("clLivingObjectLocator::slotDoIt() command send to machine -> " + loCommandSend));
 			
 			//Short check before send
 			if (meSocket->state() != QAbstractSocket::ConnectedState ) 
 			{
-				meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe","clLivingObjectMach::slotDoIt() -> cannot connect to host");			
+				meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe","clLivingObjectLocator::slotDoIt() -> cannot connect to host before command send");			
 				delete meSocket;
 				meSocket = NULL;
 				return;
 			}
 			meSocket->write(loCommandSend.toUtf8());
+			
 			if (meSocket->state() != QAbstractSocket::ConnectedState ) 
 			{
-				meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe","clLivingObjectMach::slotDoIt() -> cannot connect to host");			
+				meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe","clLivingObjectLocator::slotDoIt() -> cannot connect to host after command send");			
 				delete meSocket;
 				meSocket = NULL;
 				return;
-			}			
+			}
+						
 			meSocket->waitForBytesWritten(50);
 			//meSocket->waitForReadyRead(200);
 		}
@@ -344,9 +342,8 @@ void clLivingObjectMach::slotDoIt()
 	}
 }
 
-bool clLivingObjectMach::createCommand(QString paCommand,QString &paSocketCommand)
+bool clLivingObjectLocator::createCommand(QString paCommand,QString &paSocketCommand)
 {
-	
 	try
 	{
 		QStringList loCommandParts = paCommand.split("$C$");
@@ -471,34 +468,35 @@ bool clLivingObjectMach::createCommand(QString paCommand,QString &paSocketComman
 	}
 	catch(...)
 	{
-		meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe","clLivingObjectMach::createCommand() -> error");
+		meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe","clLivingObjectLocator::createCommand() -> error");
 		return false;
 	}
 }
 
 
-void clLivingObjectMach::readTcpData()
+void clLivingObjectLocator::readTcpData()
 {
-	
 	try
 	{
 		//Short check before send
+		
 		if (meSocket->state() != QAbstractSocket::ConnectedState ) 
 		{
-			meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe","clLivingObjectMach::readTcpData() -> cannot connect to host");			
+			meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe","clLivingObjectLocator::readTcpData() -> cannot connect to host");			
 			delete meSocket;
 			meSocket = NULL;
 			return;
 		}
+		
 		meData = meSocket->readAll();
-		meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe",QString("clLivingObjectMach::readTcpData() command recieved from machine -> " + QString::fromLocal8Bit(meData.constData())));
+		meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe",QString("clLivingObjectLocator::readTcpData() command recieved from machine -> " + QString::fromLocal8Bit(meData.constData())));
 		//// Parse the input TODO WVA///////////
 		//<returnHardwareDevice><id>0</id><state>W0R0P0D0C0T0</state><datas></datas><error>Connection Socket Error on host:[' + self.host + '] port:[' + self.port + ']...</error></returnHardwareDevice>
 
         QDomDocument loDomDocument;
         if ( !loDomDocument.setContent( meData ) ) 
 		{
-            meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe",QString("clLivingObjectMach::readTcpData() command recieved from machine -> replay XML not valid ..."));
+            meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe",QString("clLivingObjectLocator::readTcpData() command recieved from machine -> replay XML not valid ..."));
             return;
         }
 
@@ -523,7 +521,17 @@ void clLivingObjectMach::readTcpData()
 		QString loStateEnumPrevious;
 		QString loStateDataTransferPrevious;
 		QString loErrorText = QString("");		
-	   
+	   /*
+		<returnHardwareDevice>
+			<id>' + self.commandID + '</id>
+			<state>' + returnState + '</state>
+			<datas>
+				<object name="5689"><x value="30.5"/><y value="30.5"/><z value="1.0"/></object>
+				<object name="1234"><x value="60.5"/><y value="50.5"/><z value="0.5"/></object>
+			</datas>
+			<error>' + self.error + '</error>
+		</returnHardwareDevice>')
+	   */
        while( !loTablesNode.isNull() ) 
 	   {
 			if(loTablesNode.nodeName() == "state")
@@ -565,10 +573,10 @@ void clLivingObjectMach::readTcpData()
 					loPropertyName.push_back("DEVICE_STATE");
 					loPropertyName.push_back("DEVICE_FILETRANSFER");
 					
-					bool loGetById = false;
+					QString loClassNameTemp01 = QString("LIVING_OBJ_LOCATION");
 					
-					QString loClass = QString("living_obj_mach");
-					loGetById = meIceClientServer->getFromTableDatabaseById(    loClass,
+					bool loGetById = false;
+					loGetById = meIceClientServer->getFromTableDatabaseById(    loClassNameTemp01,
 																				meObjectId,
 																				loPropertyName,
 																				loReturnValues,
@@ -576,15 +584,15 @@ void clLivingObjectMach::readTcpData()
 					
 					if(!loGetById)
 					{
-						meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe","clLivingObjectMach::readTcpData -> " + loReturnMessageGetById);
+						meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe","clLivingObjectLocator::readTcpData -> " + loReturnMessageGetById);
 						return;
 					}
 					else
-						meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe","clLivingObjectMach::readTcpData -> " + loReturnMessageGetById);
+						meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe","clLivingObjectLocator::readTcpData -> " + loReturnMessageGetById);
 					
 					if(loReturnValues.size() < 1)
 					{
-						meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe","clLivingObjectMach::readTcpData -> result on fetched");
+						meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe","clLivingObjectLocator::readTcpData -> result on fetched");
 						return;
 					}
 					loStateEnumPrevious = QString(loReturnValues.at(0).c_str());
@@ -596,6 +604,7 @@ void clLivingObjectMach::readTcpData()
 				QDomElement loTablesElem = loTablesNode.toElement();
 				loErrorText = loTablesElem.text();
 				//Message detected
+				
 				if (loErrorText.compare("") != 0)
 				{
 					////////////////////////////////////// Get the error table ////////////////////////////////////////////////
@@ -605,11 +614,8 @@ void clLivingObjectMach::readTcpData()
 					loPropertyName.push_back("ERROR_TABLE");
 					
 					bool loGetById = false;
-					
-					QString loTable = QString("living_obj_mach");
-					
-					
-					loGetById = meIceClientServer->getFromTableDatabaseById(    loTable,
+					QString loClassNameTemp02 = QString("LIVING_OBJ_LOCATION");
+					loGetById = meIceClientServer->getFromTableDatabaseById(    loClassNameTemp02,
 																				meObjectId,
 																				loPropertyName,
 																				loReturnValues,
@@ -617,67 +623,175 @@ void clLivingObjectMach::readTcpData()
 					
 					if(!loGetById)
 					{
-						meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe","clLivingObjectMach::readTcpData -> " + loReturnMessageGetById);
+						meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe","clLivingObjectLocator::readTcpData -> " + loReturnMessageGetById);
 						return;
 					}
 					else
-						meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe","clLivingObjectMach::readTcpData -> " + loReturnMessageGetById);
+						meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe","clLivingObjectLocator::readTcpData -> " + loReturnMessageGetById);
 
-					if (loReturnValues.size() < 1)meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe","clLivingObjectMach::readTcpData -> No error table found ... ");
+					if (loReturnValues.size() < 1)meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe","clLivingObjectLocator::readTcpData -> No error table found ... ");
 					
-					
-					///////////////////////////////// Checking the error table object call///////////////////////////////////
-					clObjectCall * loObjectCall = callObjectDLL(QString("./Objects/libclErrorTable.so"));
-					loObjectCall->createPluginClass(meIceClientServer, meIceClientLogging);
-					
-					vector <QString> loParametersType;
-					vector <QString> loParameters;
-					vector <QString> loParametersValue;
-					vector <QString> loLogExp;
-					
-					loParameters.push_back(QString("ERRORS_LIVING_OBJ_MACH"));
-					loParametersValue.push_back(QString("ERRORS_LIVING_OBJ_MACH"));
-					loParametersType.push_back(QString("CLASS"));
-					loParameters.push_back(QString("PKEY"));
-					loParametersValue.push_back(QString(loReturnValues.at(0).c_str()));
-					loParametersType.push_back(QString("uuid"));
-					loParameters.push_back(QString("OPERATION_ERROR_INFORMATION"));
-					loParametersValue.push_back(loErrorText);
-					loParametersType.push_back(QString("text"));
-					
-					loObjectCall->doMethod(QString("getErrorNumberFromText"),loParametersType, loParameters, loParametersValue, loLogExp);
-					
-					vector <QString> loReturnParameters = loObjectCall->meReturnParameters;
-					vector <QString> loReturnParametersType = loObjectCall->meReturnParametersType;
-					
-					cleanObjectDLL();
-					
-					//////////////////////////////////// Do something with the error information //////////////////////////////
-					if (loReturnParameters.size() < 1)
+					if (loReturnValues.size() > 0)
 					{
-						meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe",QString("clLivingObjectMach::readTcpData -> Error found [" + loErrorText + "] but no number found"));
-						loStateEnum = 110;
+						///////////////////////////////// Checking the error table object call///////////////////////////////////
+						
+						clObjectCall * loObjectCall = callObjectDLL(QString("libclErrorTable.so"));
+						
+						
+						vector <QString> loParametersType;
+						vector <QString> loParameters;
+						vector <QString> loParametersValue;
+						vector <QString> loLogExp;
+						
+						loParameters.push_back(QString("ERRORS_LIVING_OBJ_LOCATION"));
+						loParametersValue.push_back(QString("ERRORS_LIVING_OBJ_LOCATION"));
+						loParametersType.push_back(QString("CLASS"));
+						loParameters.push_back(QString("PKEY"));
+						loParametersValue.push_back(QString(loReturnValues.at(0).c_str()));
+						loParametersType.push_back(QString("uuid"));
+						loParameters.push_back(QString("OPERATION_ERROR_INFORMATION"));
+						loParametersValue.push_back(loErrorText);
+						loParametersType.push_back(QString("text"));
+						
+						loObjectCall->doMethod(QString("getErrorNumberFromText"),loParametersType, loParameters, loParametersValue, loLogExp);
+						
+						vector <QString> loReturnParameters = loObjectCall->meReturnParameters;
+						//vector <QString> loReturnParametersType = loObjectCall->meReturnParametersType;
+						
+						//////////////////////////////////// Do something with the error information //////////////////////////////
+						if (loReturnParameters.size() < 1)
+						{
+							meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe",QString("clLivingObjectLocator::readTcpData -> Error found [" + loErrorText + "] but no number found"));
+							loStateEnum = 110;
+						}
+						else
+						{
+							// Check the error number //
+							// 00000 is error
+							// 10000 is warning
+							// 20000 is information
+							meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe",QString("clLivingObjectLocator::readTcpData -> Error found [" + loErrorText + "] with number [" + loReturnParameters.at(0) + "]"));
+							int loErrorCode = loReturnParameters.at(0).toInt();
+							if (loErrorCode < 10000) loStateEnum = 110;
+							if (loErrorCode >= 10000 && loErrorCode < 20000) loWarning = true;
+							if (loErrorCode >= 10000 && loErrorCode < 20000) loInformation = true;
+						}
 					}
-					else
-					{
-						// Check the error number //
-						// 00000 is error
-						// 10000 is warning
-						// 20000 is information
-						meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe",QString("clLivingObjectMach::readTcpData -> Error found [" + loErrorText + "] with number [" + loReturnParameters.at(0) + "]"));
-						int loErrorCode = loReturnParameters.at(0).toInt();
-						if (loErrorCode < 10000) loStateEnum = 110;
-						if (loErrorCode >= 10000 && loErrorCode < 20000) loWarning = true;
-						if (loErrorCode >= 10000 && loErrorCode < 20000) loInformation = true;
-					}					
 				}
+				
 			}
+			if (loTablesNode.nodeName() == "datas")
+			{
+				QDomElement loTablesElem = loTablesNode.toElement();
+				QDomNode loDatasNode = loTablesElem.firstChild();
+				
+				while( !loDatasNode.isNull() ) 
+				{
+					if(loDatasNode.nodeName() == "object")
+					{
+						
+						QDomElement loDatasElem = loDatasNode.toElement();
+						QString loName = loDatasElem.attribute("name");
+						
+						QDomNode loCoordinatesNode = loDatasElem.firstChild();
+						
+						double loCoordX = 0;
+						double loCoordY = 0;
+						double loCoordZ = 0;
+						
+						while( !loCoordinatesNode.isNull() ) 
+						{
+							if(loCoordinatesNode.nodeName() == "x")
+							{
+								QDomElement loCoordinatesElem = loCoordinatesNode.toElement();
+								loCoordX = loCoordinatesElem.attribute("value").toDouble();								
+							}								
+							else if(loCoordinatesNode.nodeName() == "y")
+							{
+								QDomElement loCoordinatesElem = loCoordinatesNode.toElement();
+								loCoordY = loCoordinatesElem.attribute("value").toDouble();																
+							}
+							else if(loCoordinatesNode.nodeName() == "z")
+							{
+								QDomElement loCoordinatesElem = loCoordinatesNode.toElement();
+								loCoordZ = loCoordinatesElem.attribute("value").toDouble();																
+							}
+							loCoordinatesNode = loCoordinatesNode.nextSibling();
+						}
+						//Check if the coordinates or not null and name is not null
+						if(loCoordX != 0 && loCoordY != 0 && loCoordZ!= 0 && loName.compare("") != 0)
+						{
+							///////////////////////
+							//Update database
+							///////////////////////
+							QString loTableName("OBJECT_TO_LOCATE");
+							vector <std::string> loProperties;
+							vector <std::string> loValues;
+							vector <std::string> loTypeValues;
+							vector <std::string> loLogExp;
+							vector <std::string> loReturnIds;
+							QString loReturnMessage;
+							
+							loProperties.push_back("NAME");
+							loValues.push_back(loName.toStdString());
+							loTypeValues.push_back(QString("text").toStdString());
+							loLogExp.push_back(QString("=").toStdString());
+							
+							QString loStartStop = QString("0");
+							
+							if (!meIceClientServer->getFromTableDatbaseByProperty(loTableName,loStartStop,loStartStop,loProperties,loValues,loTypeValues,loLogExp,loReturnIds,loReturnMessage))
+							{
+								meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe","clLivingObjectLocator::readTcpData() -> " + loReturnMessage);
+								return;
+							}
+							if (loReturnIds.size() > 0)
+							{
+								//Update coord in table
+								vector<std::string> loPropertyName;
+								vector<std::string> loValues;
+								vector<std::string> loTypeValues;
+								QString loReturnMessageUpdate;
+								loPropertyName.push_back("COORD_X");
+								loPropertyName.push_back("COORD_Y");
+								loPropertyName.push_back("COORD_Z");
+								loPropertyName.push_back("OBJ_LOCATION_ID");
+								
+								loValues.push_back(QString::number(loCoordX).toStdString());
+								loTypeValues.push_back("float8");
+								loValues.push_back(QString::number(loCoordY).toStdString());
+								loTypeValues.push_back("float8");			
+								loValues.push_back(QString::number(loCoordZ).toStdString());
+								loTypeValues.push_back("float8");			
+								loValues.push_back(meObjectId.toStdString());
+								loTypeValues.push_back("uuid");			
+								
+								QString loClassNameTemp03 = QString("OBJECT_TO_LOCATE");
+								QString loUUID = QString(loReturnIds.at(0).c_str()); 
+								
+								
+								if (!meIceClientServer->updateIntoTableDatabase( 			loClassNameTemp03,
+																							loUUID,
+																							loPropertyName,
+																							loValues,
+																							loTypeValues,
+																							loReturnMessageUpdate))
+								{
+									meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe","clLivingObjectLocator::readTcpData() -> " + loReturnMessageUpdate);
+								}
+							}
+						}
+					}
+					loDatasNode = loDatasNode.nextSibling();
+				}
+			}			
+			
+			
 			loTablesNode = loTablesNode.nextSibling();	
 	   }
 	   
 		////////////////////////////////////////////////// Compare the state of the machine //////////////////////////////////////////		
-		meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe",QString("clLivingObjectMach::readTcpData -> Previous State[" + loStateEnumPrevious + "] Previous DataTransfer[" + loStateDataTransferPrevious+ "]"));
-		meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe",QString("clLivingObjectMach::readTcpData -> Current State[" + QString::number(loStateEnum) + "] Current DataTransfer[" + QString::number(loStateDataTransfer) + "]"));
+		meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe",QString("clLivingObjectLocator::readTcpData -> Previous State[" + loStateEnumPrevious + "] Previous DataTransfer[" + loStateDataTransferPrevious+ "]"));
+		meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe",QString("clLivingObjectLocator::readTcpData -> Current State[" + QString::number(loStateEnum) + "] Current DataTransfer[" + QString::number(loStateDataTransfer) + "]"));
 		
 		if (loStateEnum == loStateEnumPrevious.toInt())loChangeState = false;
 		else loChangeState = true;
@@ -703,10 +817,9 @@ void clLivingObjectMach::readTcpData()
 			loTypeValues.push_back("int");
 			loValues.push_back(std::to_string(loStateDataTransfer));
 			loTypeValues.push_back("int");			
+			QString loClassNameTemp03 = QString("LIVING_OBJ_LOCATION");
 			
-			QString loTable = QString("living_obj_mach");
-			
-			loUpdateDb = meIceClientServer->updateIntoTableDatabase( 	loTable,
+			loUpdateDb = meIceClientServer->updateIntoTableDatabase( 	loClassNameTemp03,
 																		meObjectId,
 																		loPropertyName,
 																		loValues,
@@ -714,11 +827,11 @@ void clLivingObjectMach::readTcpData()
 																		loReturnMessageUpdate);	
 			if (!loUpdateDb)
 			{
-				meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe","clLivingObjectMach::readTcpData -> " + loReturnMessageUpdate);		   
+				meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe","clLivingObjectLocator::readTcpData -> " + loReturnMessageUpdate);		   
 				return;
 			}
 			else
-				meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe","clLivingObjectMach::readTcpData -> " + loReturnMessageUpdate);		   
+				meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe","clLivingObjectLocator::readTcpData -> " + loReturnMessageUpdate);		   
 	   }
 	   
 	   //////////////////////////////// Check if operation has to be closed or opened ////////////////////////////////////////
@@ -726,8 +839,7 @@ void clLivingObjectMach::readTcpData()
 	   {
 			///////////////////////////////// over dll ///////////////////////////////////
 			clObjectCall * loObjectCall = callObjectDLL(QString("clOperation.dll"));
-			loObjectCall->createPluginClass(meIceClientServer, meIceClientLogging);
-			
+
 			vector <QString> loParametersType;
 			vector <QString> loParameters;
 			vector <QString> loParametersValue;
@@ -765,8 +877,6 @@ void clLivingObjectMach::readTcpData()
 			
 			vector <QString> loReturnParameters = loObjectCall->meReturnParameters;
 			vector <QString> loReturnParametersType = loObjectCall->meReturnParametersType;
-			
-			cleanObjectDLL();
 	   }
 	   
 	   if (loCloseOperation)
@@ -804,30 +914,24 @@ void clLivingObjectMach::readTcpData()
 			loParametersType.push_back("int");
 			loLogExp.push_back(QString("=").toStdString());			
 			
+			QString loClassNameTemp04 = QString("OPERATION");
+			QString loStartStop = QString("0");
 			
-			QString loClass = QString("OPERATION");
-			QString loStop = QString("0");
-			QString loStart = QString("0");
-			
-			
-			
-			
-			
-			if (!meIceClientServer->getFromTableDatbaseByProperty(loClass,loStart,loStop,loParameters,loParametersValue,loParametersType,loLogExp,loReturnIds,loReturnMessage))
+			if (!meIceClientServer->getFromTableDatbaseByProperty(loClassNameTemp04,loStartStop,loStartStop,loParameters,loParametersValue,loParametersType,loLogExp,loReturnIds,loReturnMessage))
 			{
-				meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe","clLivingObjectMach::readTcpData -> " + loReturnMessage);
+				meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe","clLivingObjectLocator::readTcpData -> " + loReturnMessage);
 				return;
 			}
 			else
-				meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe","clLivingObjectMach::readTcpData -> " + loReturnMessage);
+				meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe","clLivingObjectLocator::readTcpData -> " + loReturnMessage);
 			
 
 			/////////////////////////////////////////////////////////////////////////////////////////////////////////
 			
 			//Close the operations
-			for (int j = 0; j < (int) loReturnIds.size(); j++)
+			for (int j = 0; j < loReturnIds.size(); j++)
 			{
-				clObjectCall * loObjectCallCloseOperation = callObjectDLL(QString("clOperation.dll"));
+				clObjectCall * loObjectCallCloseOperation = callObjectDLL(QString("libclOperation.so"));
 				loObjectCallCloseOperation->createPluginClass(meIceClientServer, meIceClientLogging);
 		
 		
@@ -864,7 +968,7 @@ void clLivingObjectMach::readTcpData()
 				
 				loObjectCallCloseOperation->doMethod(QString("closeOperation"),loParametersTypeClose, loParametersClose, loParametersValueClose, loLogExpClose);
 					
-				cleanObjectDLL();
+				
 			}
 		}
 		   
@@ -876,83 +980,24 @@ void clLivingObjectMach::readTcpData()
 		meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe","clLivingObjectMach::readTcpData() -> error");
 	}
 }
-/*********************************************************************
-* Object calls
-**********************************************************************/
-clObjectCall* clLivingObjectMach::callObjectDLL(QString paCurrentMethodSourceFile)
+clObjectCall * clLivingObjectLocator::callObjectDLL(QString paName)
 {
 	try
 	{
-		/*
-		 *       typedef bool (*createPluginClass_func_ptr)(clIceClientServer * paIceClientServer,clIceClientLogging  * paIceClientLogging);
-		 *       typedef bool (*doMethod_func_ptr)(QString paMethodName, const vector <QString> &paParametersType, const vector <QString> &paParameters, const vector <QString> &paParametersValue, const vector <QString> &paLogExp);
-		 *       typedef int (*GetReturnParameters_func_ptr)();
-		 */
-		clObjectCall * loObjectCall;
-		CreateModuleObject loCreateModuleObject;
-
-
-		////////////////////////Loading the library///////////////////////////////////////////////////////////////////
-		string loLibraryName = string(paCurrentMethodSourceFile.toStdString());
-		void * loLibraryLib = dlopen(loLibraryName.c_str(), RTLD_NOW);
-
-
-		if (!loLibraryLib) {
-			meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe","clClassLoader::callObjectDLL -> Library [" + paCurrentMethodSourceFile + "] not found");
-			return NULL;
-		}
-		else
+		for (int i = 0; i < meClassLoader->meClassDllNames.size(); i++)
 		{
-			meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe","clClassLoader::callObjectDLL -> Library [" + paCurrentMethodSourceFile + "] found");
-
-
-			dlerror(); /* Clear any existing error */
-
-			loCreateModuleObject = (CreateModuleObject)dlsym(loLibraryLib, "CreateModuleObject");
-			meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe","createPluginClass loaded");
-
-			meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe","createPluginClass after stocking");
-			loObjectCall = loCreateModuleObject();
-
-			if (loObjectCall->createPluginClass(meIceClientServer, meIceClientLogging))
+			if (meClassLoader->meClassDllNames.at(i).toUpper().compare(paName.toUpper()) == 0)
 			{
-				meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe","createPluginClass called");
-			}
-			else
-			{
-				meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe","createPluginClass not called");
+				return meClassLoader->meObjectCalls.at(i);
+				break;
 			}
 		}
-		return loObjectCall;
+
+		return nullptr;
 	}
 	catch(exception &e)
 	{
-		meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe","clClassLoader::callObjectDLL() -> " + QString(e.what()));
-		return NULL;
+		meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe","clLivingObjectLocator::callRoutineDLL -> " + QString(e.what()));
+		return nullptr;
 	}
 }
-bool clLivingObjectMach::cleanObjectDLL()
-{
-	try
-	{
-		////////////////////////////////////////////////////////// Free the library handle /////////////////////////////////////////////////////////////////////////
-	   /*
-	   if (meLibraryLib != NULL) 
-	   {  
-			if(FreeLibrary(meLibraryLib))
-				meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe","clParameterView::callRoutineDLL() -> Unloading library succes ...");
-			else
-				meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe","clParameterView::callRoutineDLL() -> Unloading library failed ...");
-	   }
-	   */
-		return true;		
-	}
-    catch(exception &e)
-    {	
-        meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe","clParameterView::cleanObjectDLL() -> " + QString(e.what()));
-		return NULL;
-    }
-}
-	
-
-

@@ -1,10 +1,9 @@
-#ifndef CLLIVINGOBJECTMACH_H
-#define CLLIVINGOBJECTMACH_H
+#ifndef CLLIVINGOBJECTLOCATOR_H
+#define CLLIVINGOBJECTLOCATOR_H
 
 #include <exception>
 #include <string>
 #include <iostream>
-#include <dlfcn.h>
 
 #include <QtCore/QThread>
 #include <QtCore/QString>
@@ -22,7 +21,6 @@
 #include <QtCore/QDebug>
 #include <QtNetwork/QTcpServer>
 #include <QtNetwork/QTcpSocket>
-#include <QtNetwork/QHostInfo>
 
 #include "clDatabaseColumn.h"
 #include "clIceClientLogging.h"
@@ -30,24 +28,26 @@
 #include "clObjectCall.h"
 #include "clObjectCallHeader.h"
 #include "clObject.h"
+#include "clClassLoader.h"
 
 //! [0]
-class clLivingObjectMach : public QObject
+class clLivingObjectLocator : public QObject
 {
     Q_OBJECT;
 public:
-    clLivingObjectMach(clIceClientServer * paIceClientServer, clIceClientLogging *paIceClientLogging, QString paObjectId, QMutex * paLock, QObject * parent = 0);
-    ~clLivingObjectMach();
+    clLivingObjectLocator(clIceClientServer * paIceClientServer, clIceClientLogging *paIceClientLogging, QString paObjectId, QMutex * paLock, clClassLoader  * paClassLoader, QObject * parent = 0);
+    ~clLivingObjectLocator();
 
 public slots:
 	void slotDoIt();
 	void readTcpData();
 
 private:
-	bool getLivingObjectMachProperties();
+	bool getLivingObjectLocatorProperties();
 	bool createCommand(QString paCommand, QString &paSocketCommand);
-	bool cleanObjectDLL();
-	clObjectCall* callObjectDLL(QString paCurrentMethodSourceFile);
+
+	clObjectCall * callObjectDLL(QString paName); 
+
 	
 	clIceClientLogging * meIceClientLogging;
 	clIceClientServer * meIceClientServer;
@@ -63,15 +63,10 @@ private:
 	
 	QTcpSocket *meSocket;
 	QByteArray meData;
-
-	//void* meLibraryLib;
-	//CreateModuleObjectFn* meCreateModuleObjectFn;	
-	void* meLibraryLib;
-	//HMODULE meLibraryLib[1000];
-	CreateModuleObject* meCreateModuleObject;
-	
 	
 	QMutex * meLock;
+	clClassLoader * meClassLoader;
+	
 };
 //! [0]
 
