@@ -208,7 +208,7 @@ void clMainWindow::startProductConfig()
 {
         try
         {
-            meParameterView = new clParameterView(meIceClientServer,meIceClientLogging,meClassLoader);
+            meParameterView = new clParameterView(meIceClientServer,meIceClientLogging,meClassLoader, &meLock);
             meWorkspace->addSubWindow(meParameterView);
             meParameterView->show();
         }
