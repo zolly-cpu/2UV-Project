@@ -36,6 +36,7 @@
 #include "clDatabaseColumn.h"
 #include "clIceClientLogging.h"
 #include "clIceClientServer.h"
+#include "clMethodCall.h"
 
 using namespace std;
 
@@ -48,6 +49,9 @@ public:
 	virtual bool createPluginClass(clIceClientServer * paIceClientServer,clIceClientLogging * paIceClientLogging) = 0;
 	virtual bool doMethod(QString paMethodName, const vector <QString> &paParametersType, const vector <QString> &paParameters, const vector <QString> &paParametersValue, const vector <QString> &paLogExp) = 0;
 	virtual int GetReturnParameters() = 0;
+	virtual bool createClassMethodsCall(vector <QString> paClassNames,vector <vector<QString>> paClassMethods,vector <clObjectCall *> paObjectCall) = 0;
+	virtual bool createGeneralMethodsCall(vector <QString> paMethodsNameList,vector <clMethodCall *> paMethodCallGeneral) = 0;	
+	virtual bool createDatabaseColumnsByClassNameList(vector <vector<clDatabaseColumn*>> paDatabaseColumnsByClassNameList) = 0;	
 	
 
 	

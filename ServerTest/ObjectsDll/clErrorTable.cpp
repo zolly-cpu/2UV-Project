@@ -286,3 +286,47 @@ bool clErrorTable::createPluginClass( clIceClientServer * paIceClientServer, clI
 		return false;
     }
 }
+bool clErrorTable::createClassMethodsCall(vector <QString> paClassNames,vector <vector<QString>> paClassMethods,vector <clObjectCall *> paObjectCall)
+{
+	try
+	{
+	//Loaded dll's to call the methods
+		meClassNames = paClassNames;
+		meClassMethods = paClassMethods;
+		meObjectCall = paObjectCall;
+		return true;
+	}
+	catch(exception &e)
+	{	
+		meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe","clErrorTable::createClassMethodsCall -> " + QString(e.what()));
+		return false;
+	}
+}	
+bool clErrorTable::createGeneralMethodsCall(vector <QString> paMethodsNameList,vector <clMethodCall *>paMethodCallGeneral)
+{
+	try
+	{
+		meMethodsNameList = paMethodsNameList;
+		meMethodCallGeneral = paMethodCallGeneral;		
+		return true;
+	}
+	catch(exception &e)
+	{	
+		meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe","clErrorTable::createGeneralMethodsCall -> " + QString(e.what()));
+		return false;
+	}
+}
+bool clErrorTable::createDatabaseColumnsByClassNameList(vector <vector<clDatabaseColumn*>> paDatabaseColumnsByClassNameList)
+{	
+	try
+	{
+		meDatabaseColumnsByClassNameList = paDatabaseColumnsByClassNameList;
+		return true;
+	}
+	catch(exception &e)
+	{	
+		meIceClientLogging->insertItem("10",QString(QHostInfo::localHostName()),"2UVServerTest.exe","clErrorTable::createDatabaseColumnsByClassNameList -> " + QString(e.what()));
+		return false;
+	}	
+}
+

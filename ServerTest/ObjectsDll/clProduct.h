@@ -1,5 +1,5 @@
-#ifndef _CLERRORTABLE_H
-#define _CLERRORTABLE_H
+#ifndef _CLPRODUCT_H
+#define _CLPRODUCT_H
 
 
 #include <QtCore/QString>
@@ -11,7 +11,6 @@
 #include <QtCore/QRandomGenerator>
 #include <QtNetwork/QTcpServer>
 #include <QtNetwork/QTcpSocket>
-#include <QtNetwork/QHostInfo>
 
 #include <vector>
 #include <iostream>
@@ -22,49 +21,50 @@
 #include "clIceClientServer.h"
 #include "clObjectCall.h"
 #include "clMethodCall.h"
+#include "clObject.h"
+#include "clProductSetPriorityAndWorkstepUI.h"
+
 
 using namespace std;
 
-class clOperation : public clObjectCall
+class clProduct : public clObjectCall
 {
 public:
-    clOperation ();
-    ~clOperation ();
+    clProduct ();
+    ~clProduct ();
 	
 public:
 	bool createPluginClass(clIceClientServer * paIceClientServer,clIceClientLogging  * paIceClientLogging) override;
 	bool createClassMethodsCall(vector <QString> paClassNames,vector <vector<QString>> paClassMethods,vector <clObjectCall *> paObjectCall) override;
 	bool createGeneralMethodsCall(vector <QString> paMethodsNameList,vector <clMethodCall *> paMethodCallGeneral) override;	
-	bool createDatabaseColumnsByClassNameList(vector <vector<clDatabaseColumn*>> paDatabaseColumnsByClassNameList) override;	
+	bool createDatabaseColumnsByClassNameList(vector <vector<clDatabaseColumn*>> paDatabaseColumnsByClassNameList) override;
 	int GetReturnParameters() override;
 	bool doMethod(QString paMethodName, const vector <QString> &paParametersType, const vector <QString> &paParameters, const vector <QString> &paParametersValue, const vector <QString> &paLogExp) override;
 private:
 
-	bool openOperation(const vector <QString> &paParametersType, const vector <QString> &paParameters, const vector <QString> &paParametersValue);
-	bool closeOperation(const vector <QString> &paParametersType, const vector <QString> &paParameters, const vector <QString> &paParametersValue);
-	
+	bool setPriorityAndWorkstep(const vector <QString> &paParametersType, const vector <QString> &paParameters, const vector <QString> &paParametersValue);
+	bool setNextWorkstep(const vector <QString> &paParametersType, const vector <QString> &paParameters, const vector <QString> &paParametersValue);
+	bool setPreviousWorkstep(const vector <QString> &paParametersType, const vector <QString> &paParameters, const vector <QString> &paParametersValue);
+
 	vector <QString> meParametersType;
 	vector <QString> meParameters;
 	clIceClientLogging * meIceClientLogging;
-	clIceClientServer * meIceClientServer;	
-	
-	
+	clIceClientServer * meIceClientServer;
+
 	//Loaded dll's to call the methods
 	vector <QString> meClassNames;
 	vector <vector<QString>> meClassMethods;
 	vector <clObjectCall *> meObjectCall;
 	vector <vector<clDatabaseColumn *>> meDatabaseColumnsByClassNameList;
 	vector <QString> meMethodsNameList;
-	vector <clMethodCall *> meMethodCallGeneral;	
+	vector <clMethodCall *> meMethodCallGeneral;
+	
 };
 #endif
-extern "C"
+extern "C" clObjectCall* CreateModuleObject()
 {
-	clObjectCall* CreateModuleObject()
-	{
-		// call the constructor of the actual implementation
-		clObjectCall * module = new clOperation();
-		// return the created function
-		return module;
-	}
+    // call the constructor of the actual implementation
+    clObjectCall * module = new clProduct();
+    // return the created function
+    return module;
 }

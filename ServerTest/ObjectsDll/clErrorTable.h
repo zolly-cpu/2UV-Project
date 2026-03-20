@@ -21,6 +21,7 @@
 #include "clIceClientLogging.h"
 #include "clIceClientServer.h"
 #include "clObjectCall.h"
+#include "clMethodCall.h"
 
 using namespace std;
 
@@ -32,6 +33,9 @@ public:
 	
 public:
 	bool createPluginClass(clIceClientServer * paIceClientServer,clIceClientLogging  * paIceClientLogging) override;
+	bool createClassMethodsCall(vector <QString> paClassNames,vector <vector<QString>> paClassMethods,vector <clObjectCall *> paObjectCall) override;
+	bool createGeneralMethodsCall(vector <QString> paMethodsNameList,vector <clMethodCall *> paMethodCallGeneral) override;	
+	bool createDatabaseColumnsByClassNameList(vector <vector<clDatabaseColumn*>> paDatabaseColumnsByClassNameList) override;	
 	int GetReturnParameters() override;
 	bool doMethod(QString paMethodName, const vector <QString> &paParametersType, const vector <QString> &paParameters, const vector <QString> &paParametersValue, const vector <QString> &paLogExp) override;
 private:
@@ -46,6 +50,15 @@ private:
 	vector <QString> meParameters;
 	clIceClientLogging * meIceClientLogging;
 	clIceClientServer * meIceClientServer;	
+	
+	//Loaded dll's to call the methods
+	vector <QString> meClassNames;
+	vector <vector<QString>> meClassMethods;
+	vector <clObjectCall *> meObjectCall;
+	vector <vector<clDatabaseColumn *>> meDatabaseColumnsByClassNameList;
+	vector <QString> meMethodsNameList;
+	vector <clMethodCall *> meMethodCallGeneral;	
+	
 };
 #endif
 extern "C" clObjectCall* CreateModuleObject()

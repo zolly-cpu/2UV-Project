@@ -44,3 +44,26 @@ Operation = myenv.SharedLibrary('clOperation', SourcesDllOperation,
 												'libIceSSL']
                                                 )
 myenv.Install (InstallDir + '/Objects', 'libclOperation.so')
+
+#Product
+SourcesDllProduct = [       'clProduct.cpp',
+							myenv.Moc('clProductSetPriorityAndWorkstepUI.h'),
+							'clProductSetPriorityAndWorkstepUI.cpp',
+                            'clObjectCall.cpp',
+                            '../clDatabaseColumn.cpp',
+                            '../clIceClientLogging.cpp',
+                            '../clIceClientServer.cpp',
+                            '../ICE_LogApplication.cpp',
+                            '../ICE_ServerApplication.cpp'
+                        ]
+Product = myenv.SharedLibrary('clProduct', SourcesDllProduct,
+                                                LIBS=['libQt5Core',
+                                                'libQt5Xml',
+                                                'libQt5Network',
+                                                'libpq',
+												'libIce',
+												'libIceDiscovery',
+												'libIceLocatorDiscovery',
+												'libIceSSL']
+                                                )
+myenv.Install (InstallDir + '/Objects', 'libclProduct.so')
